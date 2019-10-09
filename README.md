@@ -14,8 +14,8 @@ Pop art - Warhol
 
 2) APIs shortlist  
 https://developer.deeparteffects.com/  
-https://metmuseum.github.io/
-https://pro.europeana.eu/resources/apis/intro
+https://metmuseum.github.io/  
+https://pro.europeana.eu/resources/apis/intro  
 
 
 
