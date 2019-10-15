@@ -8,14 +8,14 @@ traverson.registerMediaType(JsonHalAdapter.mediaType, JsonHalAdapter);
 api = traverson.from('https://api.artsy.net/api').jsonHal();
 
 api.newRequest()
-  .follow('artworks')
+  .follow('artists')
   .withRequestOptions({
     headers: {
       'X-Xapp-Token': xappToken,
       'Accept': 'application/vnd.artsy-v2+json'
     }
   })
- .withTemplateParameters({ artist_id: '4d8b92b64eb68a1b2c000414',size:20 })
+ .withTemplateParameters({ sortable_name: "Warhol Andy" })
   .getResource(function(error, andyWarhol) {
-    console.log(andyWarhol._embedded.artworks);
+    console.log(andyWarhol);
   });
