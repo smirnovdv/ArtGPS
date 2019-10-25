@@ -6,7 +6,7 @@ import GalleryPage from './GalleryPage';
 const Router = require("react-router-dom").BrowserRouter;
 const Route = require("react-router-dom").Route;
 
-//this is key routing Component. App build for 1920*1080, nothing is responsive at the moment
+//this is key routing Component. TODO:App build for 1920*1080, nothing is responsive at the moment
 
 class App extends Component {
   render() {

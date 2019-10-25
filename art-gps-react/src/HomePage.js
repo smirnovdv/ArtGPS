@@ -4,18 +4,19 @@ import Navbar from './Navbar';
 import Gallery from './Gallery';
 import StartButton from './StartButton';
 
+//Home page, TODO: optimize image sizes
 class HomePage extends  Component {
     constructor(props) {
         super(props);
         this.state = {
-            gallery: ["1.jpeg","2.jpeg","3.jpeg","4.jpeg","5.jpeg"]
+            gallery: ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg"]
         }
     }
     render() {
         return (
             <div className="homepage">
                 <Navbar/>
-                <Gallery pics = {["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg"]}/>
+                <Gallery pics = {this.state.gallery}/>
                 <StartButton/>
             </div>
         )
