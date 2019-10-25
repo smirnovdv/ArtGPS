@@ -1,0 +1,9 @@
+.gallerypage {
+    font-family: 'Prompt', sans-serif;
+    background-image: url('../images/DALI_Grey.png');
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+}

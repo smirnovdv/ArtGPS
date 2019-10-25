@@ -1,0 +1,23 @@
+button {
+    width:300px;
+    height:100px;
+    margin-left:10vw;
+    border:0;
+    box-shadow: 5px 10px #888888;
+}
+button img {
+    width:100%;
+    object-fit: cover;
+}
+
+button:hover {
+    width:300px;
+    height:100px;
+    box-shadow: 5px 10px #888888;
+}
+button:active {
+    margin-top:5px;
+    width:300px;
+    height:100px;
+    box-shadow: 2px 5px #888888;
+}

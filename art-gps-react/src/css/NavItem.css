@@ -1,0 +1,25 @@
+.navitem {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float:right;
+    width:15vw;
+    font-size: 2rem;
+    text-align: center;
+    padding:20px;
+    color: #FFFFFF;
+    font-weight: bolder;
+    margin-top:5vh;
+    border: 3px solid rgb(66, 70, 85);
+    text-transform: capitalize;
+}
+
+.navitem:hover {
+   color: #DBB943;
+   border: 3px rgb(190,29,47) solid;
+}
+.navitem:active {
+    color: FFFFFF;
+    font-size: 2.1rem;
+ }

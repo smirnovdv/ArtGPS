@@ -1,0 +1,77 @@
+.colored {
+    color:#DBB943;
+}
+
+.ArtistsMovementsList {
+    float:right;
+    margin-right: 10vw;
+    margin-top: 10vh;
+    border: black 2px solid;
+    padding: 20px;
+    
+}
+
+.ArtistsMovementsList p {
+    font-size: 2rem;
+    font-weight: bolder;
+    margin: 30px;
+    color:rgb(66, 70, 85);
+}
+
+.ArtistsMovementsList ul li {
+    white-space: pre;
+    position:relative;
+    width:fit-content;
+    border-bottom: solid 2px rgba(66, 70, 85, 0);
+    margin: 17px;
+    list-style: none;
+    color:#DBB943;
+    font-size:4rem;
+    line-height: 1.5rem}
+
+.ArtistsMovementsList ul li:hover {
+    cursor: pointer;
+    border-bottom: solid 2px rgb(190,29,47);
+  }
+.ArtistsMovementsList ul li:hover .upArrow {
+    visibility: visible;
+}
+.ArtistsMovementsList ul li:hover .downArrow {
+    visibility: visible;
+}
+
+.movement, .artist {
+    font-size:1.5rem;
+    font-weight: bold;
+    color:rgb(66, 70, 85);
+}
+
+.artist {
+    font-weight: lighter;
+    color:rgb(66, 70, 85);
+}
+
+.upArrow {
+    visibility: hidden;
+    position:absolute;
+    right:1px;
+    bottom:-2px;
+    width: 8px;
+    height:2px;
+    background-color:rgb(190,29,47);
+    transform: rotate(-45deg);
+    transform-origin: right top;
+    
+}
+.downArrow {
+    visibility: hidden;
+    position:absolute;
+    right:1px;
+    bottom:-2px;
+    width: 8px;
+    height: 2px;
+    background-color:rgb(190,29,47);
+    transform-origin: right bottom;
+    transform: rotate(45deg);
+    
+}

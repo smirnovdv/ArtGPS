@@ -1,0 +1,14 @@
+.logo {
+    width:25vw;
+    height: inherit;
+    float:left;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin-left: 10px;
+}
+
+.logo img {
+    height: 70%;
+    
+}

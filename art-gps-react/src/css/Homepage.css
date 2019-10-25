@@ -1,0 +1,9 @@
+.homepage {
+    font-family: 'Prompt', sans-serif;
+    background-image: url('../images/women.jpg');
+    background-position: 0px -200px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+}
