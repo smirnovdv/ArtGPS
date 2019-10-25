@@ -4,13 +4,20 @@ import Logo from './Logo';
 import NavItem from './NavItem';
 const Link = require("react-router-dom").Link;
 
-function Navbar() {
+function Navbar(props) {
+    const navItems = [
+        "challenge",
+        "inspiration",
+        "gallery"
+    ]
+    const navComponents = navItems.map((name)=>{
+       return <NavItem name={name} active={props.activePage===name}/>
+    }
+    )
     return (
         <div className="navbar">
             <Logo/>
-            <NavItem name="challenge"/>
-            <NavItem name="inspiration"/>
-            <NavItem name="gallery"/>
+            {navComponents}
         </div>
     )
   }

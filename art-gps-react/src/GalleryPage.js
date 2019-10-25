@@ -7,7 +7,7 @@ import ArtistsMovementsList from './ArtistsMovementsList';
 function GalleryPage(){
     return (
         <div className="gallerypage">
-            <Navbar/>
+            <Navbar activePage="gallery"/>
             <ArtistsMovementsList/>
         </div>
         )

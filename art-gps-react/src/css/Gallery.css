@@ -14,11 +14,11 @@
     
 }
 
-.gallery img:hover {
+/* .gallery img:hover {
     height:205px;
     width:205px;
     z-index: 5;
     object-fit: cover;
     box-shadow: 5px 5px #888888;
     transition-duration: 0.3s;
-}
+} */

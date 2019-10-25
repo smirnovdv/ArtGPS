@@ -1,6 +1,6 @@
 .logo {
     width:25vw;
-    height: inherit;
+    height: 16vh;
     float:left;
     display: flex;
     align-items: flex-end;
@@ -8,7 +8,7 @@
     margin-left: 10px;
 }
 
-.logo img {
-    height: 70%;
-    
+
+.logo img:active {
+    height: 15vh;
 }
