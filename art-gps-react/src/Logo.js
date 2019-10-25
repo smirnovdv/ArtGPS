@@ -3,6 +3,7 @@ import './css/Logo.css';
 import logo from './images/logo.png';
 const Link = require("react-router-dom").Link;
 
+//TODO: replace img with divs arrow
 function Logo() {
     return (
         <div className="logo">
