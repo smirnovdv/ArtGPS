@@ -1,10 +1,11 @@
 .gallery {
-    height:300px;
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    padding: 30px;
+    align-items: center;
+    margin-top: 5vh ;
+
 }
 
 .gallery img {
@@ -21,4 +22,5 @@
     object-fit: cover;
     box-shadow: 5px 5px #888888;
     transition-duration: 0.3s;
-} */
+}
+z */
