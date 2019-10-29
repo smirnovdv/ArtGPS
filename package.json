@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/ACCSoftwareBootcamp/ArtGPS#readme",
   "dependencies": {
+    "pg": "^7.12.1",
     "traverson": "^6.1.1",
     "traverson-hal": "^6.1.0"
   }

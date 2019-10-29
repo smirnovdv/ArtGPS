@@ -6,9 +6,9 @@ const Link = require("react-router-dom").Link;
 
 function Navbar(props) {
     const navItems = [
-        "challenge",
+        "gallery",
         "inspiration",
-        "gallery"
+        "challenge"
     ]
     const navComponents = navItems.map((name)=>{
        return <NavItem name={name} active={props.activePage===name}/>
@@ -20,6 +20,6 @@ function Navbar(props) {
             {navComponents}
         </div>
     )
-  }
+}
 
 export default Navbar;

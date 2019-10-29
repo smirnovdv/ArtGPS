@@ -11,7 +11,7 @@ const Route = require("react-router-dom").Route;
 class App extends Component {
   render() {
     return (
-    <Router>
+    <Router> 
       <Route path='/' exact render = {
         () => {
           return <HomePage/>
