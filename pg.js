@@ -1,4 +1,4 @@
-//this code interacts with SQL database
+//this code is a template to interact with our SQL database
 const { Client } = require('pg');
 
 //db connection params
