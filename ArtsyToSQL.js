@@ -1,4 +1,4 @@
-//this code requests all data about top 100 atworks from Artsy API and stores it into PostgresSQL database
+//this code requests all data about top 100 artworks from Artsy API and stores it into PostgresSQL database
 
 const desiredNumberOfArtworks = 100;
 const { Client } = require('pg');
@@ -32,7 +32,7 @@ client.connect()
 
 
 
-//making request for artworks wher artist has paticular artist_id, returning max of 100 artworks
+//making request for artworks where artist has particular artist_id, returning max of 100 artworks
 api.newRequest()
 .follow('artworks')
 .withRequestOptions({
@@ -48,7 +48,7 @@ api.newRequest()
     console.log("API error:" + error)
   }
   else {
-    //mapping all artworks, escaping quotation mark and inserting requered artworks data into db
+    //mapping all artworks, escaping quotation mark and inserting required artworks data into db
     data._embedded.artworks.map((artwork,index)=>{
       let query = `
       INSERT INTO artworks (id,artsy_id,category,medium,image_url,title,date)
