@@ -1,4 +1,4 @@
-//this code requests all data about top 100 artworks from Artsy API and stores it into PostgresSQL database
+//this code requests all data about top 1000 artworks from Artsy API and stores it into PostgresSQL database
 
 const desiredNumberOfArtworks = 1000;
 const { Client } = require('pg');
