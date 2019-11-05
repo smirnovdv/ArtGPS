@@ -41,7 +41,7 @@ api.newRequest()
     'Accept': 'application/vnd.artsy-v2+json'
   }
 })
-//asking for 100 artworks
+//request for artworks
 .withTemplateParameters({size:desiredNumberOfArtworks})
 .getResource(function(error, data) {
   if (error) {
@@ -53,8 +53,13 @@ api.newRequest()
       if (artwork._links.image && artwork.category == "Painting" && artwork.title && artwork.medium && artwork._links.image && artwork.title && artwork.date){
         let query = `
         INSERT INTO artworks (artsy_id,category,medium,image_url,title,date)
-        VALUES ('${artwork.id}','Painting','${artwork.medium.replace(/'/g, "")}','${artwork._links.image.href}','${artwork.title.replace(/'/g, "")}','${artwork.date.replace(/'/g, "")}')`;
-        
+        VALUES ('${artwork.id}',
+                'Painting',
+                '${artwork.medium.replace(/'/g, "")}',
+                '${artwork._links.image.href}',
+                '${artwork.title.replace(/'/g, "")}',
+                '${artwork.date.replace(/'/g, "")}')`;
+                
         client.query(query, function(err, data) {
           if(err) {
             console.log('Insert error: ', err, query);
