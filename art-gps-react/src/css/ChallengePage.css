@@ -1,0 +1,9 @@
+.challengePage {
+    font-family: 'Prompt', sans-serif;
+    width: 100vw;
+    height: 100vh;
+}
+img{
+    width:50vw;
+    max-height:90vh;
+}

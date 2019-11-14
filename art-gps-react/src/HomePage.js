@@ -5,7 +5,7 @@ import Gallery from './Gallery';
 import StartButton from './StartButton';
 
 //Home page
-class HomePage extends  Component {
+class HomePage extends Component {
     constructor(props) {
         super(props);
         this.state = {

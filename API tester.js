@@ -31,7 +31,6 @@ client.connect()
 });
 
 
-
 //making request for artworks where artist has particular artist_id, returning max of 100 artworks
 api.newRequest()
 .follow('artworks','_links','artists')

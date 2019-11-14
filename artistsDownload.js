@@ -34,56 +34,57 @@ client.connect()
 
 //selecting all artworks from db
 client.query(`SELECT artsy_id FROM artworks WHERE artist_id IS NULL LIMIT 350`, function(err, data) {
-    if(err) {
-        console.log('SQL read error: ', err);
-        client.end();
-    }
-    else {
-        //making artist request for every artwork using artwork_id
-        data.rows.forEach((item)=>{
-            setTimeout(()=>{
-                api.newRequest()
-                .follow('artists')
-                .withRequestOptions({
-                headers: {
-                    'X-Xapp-Token': xappToken,
-                    'Accept': 'application/vnd.artsy-v2+json'
-                }
-                })
-                .withTemplateParameters({artwork_id:item.artsy_id.trim()})
-                .getResource(function(error, data) {
-                    if (error) {
-                        console.log("API error:" + error);
-                    }
-                    else {
-                        //saving all data to our db
-                        data._embedded.artists.map((response)=>{
-                            if (response.id && response.name && response.birthday && response.hometown) {
-                                const queryUpdateArtistId = `UPDATE artworks
-                                            SET artist_id = '${response.id}'
-                                            WHERE artsy_id = '${item.artsy_id.trim()}'; 
-                                            INSERT INTO artists (artsy_id,name,birthday,hometown)
-                                            VALUES ('${trimData(response.id)}',
-                                                    '${trimData(response.name)}',
-                                                    '${trimData(response.birthday)}',
-                                                    '${trimData(response.hometown)}'); 
-                                            `
-                                client.query(queryUpdateArtistId,
-                                        function(err, data) {
-                                        if(err) {
-                                            console.log('Insert error: ', err, queryUpdateArtistId);
-                                        }
-                                        else {
-                                            console.log(response.name + " saved");
-                                        }
-                                });
-                            }
-                        });
-                    };
-                });
-            },500)
-        })
-    }
+	if(err) {
+		console.log('SQL read error: ', err);
+		client.end();
+	}
+	else {
+		//making artist request for every artwork using artwork_id
+		data.rows.forEach((item)=>{
+			setTimeout(()=>{
+				api.newRequest()
+				.follow('artists')
+				.withRequestOptions({
+				headers: {
+					'X-Xapp-Token': xappToken,
+					'Accept': 'application/vnd.artsy-v2+json'
+				}
+				})
+				.withTemplateParameters({artwork_id:item.artsy_id.trim()})
+				.getResource(function(error, data) {
+					if (error) {
+						console.log("API error:" + error);
+					}
+					else {
+						//saving all data to our db
+						data._embedded.artists.map((response)=>{
+							if (response.id && response.name && response.birthday && response.hometown) {
+								const queryUpdateArtistId =
+								`UPDATE artworks
+								SET artist_id = '${response.id}'
+								WHERE artsy_id = '${item.artsy_id.trim()}';
+								INSERT INTO artists (artsy_id,name,birthday,hometown)
+								VALUES ('${trimData(response.id)}',
+										'${trimData(response.name)}',
+										'${trimData(response.birthday)}',
+										'${trimData(response.hometown)}');
+								`
+								client.query(queryUpdateArtistId,
+										function(err, data) {
+										if(err) {
+											console.log('Insert error: ', err, queryUpdateArtistId);
+										}
+										else {
+											console.log(response.name + " saved");
+										}
+								});
+							}
+						});
+					};
+				});
+			},500)
+		})
+	}
 });
 
 

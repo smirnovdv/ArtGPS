@@ -3,6 +3,7 @@ import './css/App.css';
 import HomePage from './HomePage';
 import './css/GalleryPage.css';
 import GalleryPage from './GalleryPage';
+import ChallengePage from './ChallengePage';
 const Router = require("react-router-dom").BrowserRouter;
 const Route = require("react-router-dom").Route;
 
@@ -20,6 +21,11 @@ class App extends Component {
       <Route path='/gallery' exact render = {
         () => {
           return <GalleryPage/>
+        }
+      }/>
+      <Route path='/challenge' exact render = {
+        () => {
+          return <ChallengePage/>
         }
       }/>
     </Router>

@@ -1,7 +1,8 @@
 //this code requests all data about top 1000 artworks from Artsy API and stores it into PostgresSQL database
 
 const desiredNumberOfArtworks = 1000;
-const { Client } = require('pg');
+
+
 // we are using traverson and traverson-hal modules for HATEOAS (Hypermedia as the Engine of Application State) API of artsy
 const traverson = require('traverson');
 const    JsonHalAdapter = require('traverson-hal');
@@ -14,6 +15,7 @@ api = traverson.from('https://api.artsy.net/api').jsonHal();
 
 //this code connects with SQL database
 //db connection params
+const { Client } = require('pg');
 let connectionObject = {
   host : "127.0.0.1",
   database : "art_gps",
@@ -31,7 +33,6 @@ client.connect()
 });
 
 
-
 //making request for artworks where artist has particular artist_id, returning max of 100 artworks
 api.newRequest()
 .follow('artworks')
@@ -41,7 +42,6 @@ api.newRequest()
     'Accept': 'application/vnd.artsy-v2+json'
   }
 })
-//request for artworks
 .withTemplateParameters({size:desiredNumberOfArtworks})
 .getResource(function(error, data) {
   if (error) {
