@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 
+//db connection
 const { Client } = require('pg');
 let connectionObject = {
     host : "127.0.0.1",
@@ -19,15 +20,14 @@ client.connect()
   console.error('connection error', err.stack)
 });
 
-  //handling CORS
+//handling CORS
 // app.use((req,res,next) => {
 //     res.header('Access-Control-Allow-Origin','*');
     
 // });
 
-  
-
-app.get('/api',(req,res)=>{
+//handling requests
+app.get('/get_challenge',(req,res)=>{
     
     let query = `SELECT * FROM artworks
                   ORDER BY RANDOM() LIMIT 1` 
@@ -37,8 +37,6 @@ app.get('/api',(req,res)=>{
       res.send(data.rows[0]);
       
     });
-
-
 
 });
 

@@ -12,16 +12,16 @@ class ChallengePage extends Component{
     constructor(){
         super();
         this.state = {
-            artwork_pic:'',
+            artwork:{image_url:""},
             score:0
         }
     }
     
     componentDidMount() {
         //fetching "proxy": "http://localhost:3001",
-        fetch(`/api`)
+        fetch(`/get_challenge`)
         .then(
-            function(response) {
+            (response)=> {
             if (response.status !== 200) {
                 console.log('Looks like there was a problem. Status Code: ' +
                 response.status);
@@ -29,9 +29,9 @@ class ChallengePage extends Component{
             }
 
             // Examine the text in the response
-            response.text().then(function(artwork) {
-                console.log("Server response is" + artwork);
-                // this.setState({artwork_pic:''})
+            response.text().then((artwork)=> {
+                console.log("Server response is" + JSON.parse(artwork));
+                this.setState({artwork:JSON.parse(artwork)})
             });
             }
         )
@@ -45,7 +45,7 @@ class ChallengePage extends Component{
             <div className="challengePage">
                 <Navbar activePage="challenge"/>
                 {/* <ChallengeScore/> */}
-                <ChallengePic pic = {this.state.artwork_pic}/>
+                <ChallengePic pic = {this.state.artwork.image_url.replace("{image_version}","large")}/>
                 {/* <ChallengeQnA/>
                 <ChallengeRightAnswer/> */}
             </div>
