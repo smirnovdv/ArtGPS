@@ -30,11 +30,11 @@ client.connect()
 app.get('/get_challenge',(req,res)=>{
     
     let query = `SELECT * FROM artworks
-                  ORDER BY RANDOM() LIMIT 1` 
+                  ORDER BY RANDOM() LIMIT 3` 
               
     client.query(query, function(err, data) {
-      console.log(err,data.rows[0]);
-      res.send(data.rows[0]);
+      console.log(err,data.rows);
+      res.send(data.rows);
       
     });
 

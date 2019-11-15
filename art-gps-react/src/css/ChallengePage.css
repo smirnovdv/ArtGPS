@@ -1,9 +1,59 @@
-.challengePage {
+*{
+    margin:0;
+    padding:0;
+}
+
+.Challenge {
     font-family: 'Prompt', sans-serif;
-    width: 100vw;
-    height: 100vh;
+    width: 90vw;
+    height: 90vh;
+    display:flex;
+    flex-direction: row;
 }
-img{
-    max-width:50vw;
-    max-height:90vh;
+
+.challengePic {
+    width:40vw;
+    height:70vh;
+    margin:20px;
+    margin-left: 5vw;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* box-shadow: 5px 5px #888888; */
 }
+
+.buttons {
+    max-width:40vw;
+    display:flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    
+}
+
+.answer {
+    position: relative;
+    box-sizing: border-content;
+    font-size: 22px;
+    width:40vw;
+    height:100px;
+    margin-left:100px;
+    margin-top:50px;
+    :5px;
+    border:0;
+    box-shadow: 5px 5px #888888;
+
+}
+
+.answer img {
+    width:100%;
+    object-fit: cover;
+}
+
+.answer:active {
+    top: 3px;
+    margin-left:103px;
+    width:40vw;
+    height:100px;
+    box-shadow: 2px 2px #888888;
+}
+

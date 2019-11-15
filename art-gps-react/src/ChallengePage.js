@@ -12,7 +12,7 @@ class ChallengePage extends Component{
     constructor(){
         super();
         this.state = {
-            artwork:{image_url:""},
+            artworks:[{image_url:""},{image_url:""},{image_url:""}],
             score:0
         }
     }
@@ -31,7 +31,7 @@ class ChallengePage extends Component{
             // Examine the text in the response
             response.text().then((artwork)=> {
                 console.log("Server response is" + JSON.parse(artwork));
-                this.setState({artwork:JSON.parse(artwork)})
+                this.setState({artworks:JSON.parse(artwork)})
             });
             }
         )
@@ -45,7 +45,7 @@ class ChallengePage extends Component{
             <div className="challengePage">
                 <Navbar activePage="challenge"/>
                 {/* <ChallengeScore/> */}
-                <ChallengePic pic = {this.state.artwork.image_url.replace("{image_version}","large")}/>
+                <ChallengePic artworks = {this.state.artworks}/>
                 {/* <ChallengeQnA/>
                 <ChallengeRightAnswer/> */}
             </div>

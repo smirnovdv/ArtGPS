@@ -4,7 +4,7 @@ import start_button from './images/start_button.png';
 
 function StartButton(props) {
     return (
-        <button>
+        <button className="homeButton">
             <img src={start_button} alt="" srcset=""/>
         </button>
     )
