@@ -32,13 +32,11 @@
 
 .answer {
     position: relative;
-    box-sizing: border-content;
     font-size: 22px;
     width:40vw;
     height:100px;
     margin-left:100px;
     margin-top:50px;
-    :5px;
     border:0;
     box-shadow: 5px 5px #888888;
 
@@ -57,3 +55,36 @@
     box-shadow: 2px 2px #888888;
 }
 
+.challengeQuestion {
+    margin-top:5vh;
+    position: relative;
+    font-size: 32px;
+    width:40vw;
+    height:40px;
+    margin-left:100px;
+    
+}
+
+.clickedWrong {
+    position: relative;
+    font-size: 22px;
+    width:40vw;
+    height:100px;
+    margin-left:100px;
+    margin-top:50px;
+    border:0;
+    box-shadow: 5px 5px #888888;
+    background-color:red;
+}
+
+.clickedRight {
+    position: relative;
+    font-size: 22px;
+    width:40vw;
+    height:100px;
+    margin-left:100px;
+    margin-top:50px;
+    border:0;
+    box-shadow: 5px 5px #888888;
+    background-color:green;
+}
