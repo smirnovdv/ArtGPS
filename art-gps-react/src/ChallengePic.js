@@ -5,9 +5,12 @@ export default class ChallengePic extends Component {
     constructor(){
         super();
         this.state = {
-            artworks:[{image_url:""},{image_url:""},{image_url:""}],
+            artworks:[{},{},{}],
             score:0,
-            time:0
+            time:0,
+            seconds:60,
+            //plug for .replace method
+            rightAnswer:{image_url:"*"}
         }
     }
     fetchPic() {
@@ -23,8 +26,10 @@ export default class ChallengePic extends Component {
             // Examine the text in the response
             response.text().then((artwork)=> {
                 let d = new Date();
-                console.log("Server response is" + JSON.parse(artwork));
+                let rightAnswer = JSON.parse(artwork).splice(Math.floor(Math.random()*3),1)
+                console.log(rightAnswer)
                 this.setState({artworks:JSON.parse(artwork),
+                               rightAnswer:rightAnswer[0],
                                time:d.getTime()}
                 )
             });
@@ -34,25 +39,48 @@ export default class ChallengePic extends Component {
             console.log('Fetch Error :-S', err);
         });
     }
+
+    tick() {
+        if (this.state.seconds>0) {
+            this.setState(prevState => ({
+                seconds: prevState.seconds - 1
+        }))
+        }
+        else {
+            clearInterval(this.interval);
+        }
+    }
+
+
+    componentWillUnmount() {
+        clearInterval(this.interval);
+      }
+
+      
     componentDidMount() {
         //fetching "proxy": "http://localhost:3001",
-        this.fetchPic()
+        this.fetchPic();
+        this.interval = setInterval(() => this.tick(), 1000);
     }
     
     
     // clicks on answers
     handleClick = (e) => {
         let target = e.target;
-        if (target.innerText === this.state.artworks[0].title.trim()) {
+        if (target.innerText === this.state.rightAnswer.title.trim()) {
             target.classList="clickedRight";
             let d = new Date();
             
             setTimeout(()=>{
+                if (this.state.seconds>0){
                 this.setState((prevState, props) => ({
-                    score: prevState.score  +Math.round(10000000/(d.getTime() - prevState.time))
+                    score: prevState.score  + Math.round(10000/(d.getTime() - prevState.time))
                 }));
-                target.classList="answer";
-                this.fetchPic()},2000)
+                
+                    target.classList="answer";
+                    this.fetchPic()
+                }
+            },1000)
         }
         else {
             target.classList="clickedWrong";
@@ -62,18 +90,16 @@ export default class ChallengePic extends Component {
     }
     // const answer = <button className="answer">{props.artworks[randomArray.splice(Math.floor(Math.random()*3),1)].title}</button>
     render(){
-        let image = this.state.artworks[0].image_url.replace("{image_version}","large");
-        let randomArray = [0,1,2];
         return (
             <div className="Challenge">
-                <div className="challengePic" style={{backgroundImage:'url("'+image+'")'}}></div>
+                <div className="challengePic" style={{backgroundImage:'url("'+this.state.rightAnswer.image_url.replace('{image_version}','large')+'")'}}></div>
                 <div className="buttons"> 
                     <p className="challengeQuestion">What is the name of this artwork?</p>
-                    <p className="challengeQuestion">Your score: {this.state.score}</p>
+                    <p className="challengeQuestion">Your score: {this.state.score} Time left: {this.state.seconds}</p>
                     {/* randomized buttons */}
-                    <button className="answer" onClick={this.handleClick}>{this.state.artworks[randomArray.splice(Math.floor(Math.random()*3),1)].title}</button>
-                    <button className="answer" onClick={this.handleClick}>{this.state.artworks[randomArray.splice(Math.floor(Math.random()*2),1)].title}</button>
-                    <button className="answer" onClick={this.handleClick}>{this.state.artworks[randomArray.splice(Math.floor(Math.random()*1),1)].title}</button>
+                    <button className="answer" onClick={this.handleClick}>{this.state.artworks[0].title}</button>
+                    <button className="answer" onClick={this.handleClick}>{this.state.artworks[1].title}</button>
+                    <button className="answer" onClick={this.handleClick}>{this.state.artworks[2].title}</button>
                 </div>
             </div>
         )

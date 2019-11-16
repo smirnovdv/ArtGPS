@@ -34,9 +34,9 @@
     position: relative;
     font-size: 22px;
     width:40vw;
-    height:100px;
+    height:70px;
     margin-left:100px;
-    margin-top:50px;
+    margin-top:40px;
     border:0;
     box-shadow: 5px 5px #888888;
 
@@ -51,7 +51,7 @@
     top: 3px;
     margin-left:103px;
     width:40vw;
-    height:100px;
+    height:70px;
     box-shadow: 2px 2px #888888;
 }
 
@@ -69,9 +69,9 @@
     position: relative;
     font-size: 22px;
     width:40vw;
-    height:100px;
+    height:70px;
     margin-left:100px;
-    margin-top:50px;
+    margin-top:40px;
     border:0;
     box-shadow: 5px 5px #888888;
     background-color:red;
@@ -81,9 +81,9 @@
     position: relative;
     font-size: 22px;
     width:40vw;
-    height:100px;
+    height:70px;
     margin-left:100px;
-    margin-top:50px;
+    margin-top:40px;
     border:0;
     box-shadow: 5px 5px #888888;
     background-color:green;
