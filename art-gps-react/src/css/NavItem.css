@@ -14,9 +14,11 @@ a {
     padding:20px;
     color: #FFFFFF;
     font-weight: bolder;
-    margin-top:5vh;
+    margin-top:4vh;
+    margin-bottom:1vh;
     border: 3px solid rgb(66, 70, 85);
     text-transform: capitalize;
+    font-family: 'Prompt', sans-serif;
     
 }
 .navitem:hover {

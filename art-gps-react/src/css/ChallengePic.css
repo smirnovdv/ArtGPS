@@ -1,0 +1,133 @@
+
+.challengePic {
+    width:40vw;
+    height:75vh;
+    margin:20px;
+    margin-left: 5vw;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* box-shadow: 5px 5px #888888; */
+}
+
+.buttons {
+    margin-top:30px;
+    height:75vh;
+    max-width:60vw;
+    display:flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    
+}
+
+.answer {
+    font-weight: bold;
+    position: relative;
+    font-size: 20px;
+    width:40vw;
+    min-height:70px;
+    height: fit-content;
+    margin-left:65px;
+    margin-top:20px;
+    border:5px, solid, #dbb943;
+    color:rgb(48, 46, 46);
+    background-color:rgb(204, 187, 187);
+    border-radius: 10px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.answer img {
+    width:100%;
+    object-fit: cover;
+}
+
+.answer:active {
+    font-weight: bold;
+    font-size: 22px;
+    margin-left:65px;
+    width:40vw;
+    min-height:70px;
+    height: fit-content;
+    color:rgb(49, 48, 48);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: 0.1s;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.challengeQuestion {
+    margin:5vh;
+    position: relative;
+    font-size: 32px;
+    width:40vw;
+    height:40px;
+    margin-left:75px;
+    text-align: center;
+    
+}
+
+.challengeQuestion:nth-of-type(1) {
+    font-weight: bold;
+}
+
+
+
+.clickedWrong {
+    font-weight: bold;
+    position: relative;
+    font-size: 20px;
+    width:40vw;
+    min-height:70px;
+    height: fit-content;
+    margin-left:65px;
+    margin-top: 20px;
+    background-color:rgb(209, 108, 108);
+    color:rgb(49, 48, 48);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.clickedRight {
+    font-weight: bold;
+    position: relative;
+    font-size: 20px;
+    width:40vw;
+    min-height:70px;
+    height: fit-content;
+    margin-left:65px;
+    margin-top: 20px;
+    background-color:rgb(87, 167, 87);
+    color:rgb(49, 48, 48);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.score {
+    color:rgb(14, 139, 14)
+}
+
+.seconds {
+    color:rgb(209, 9, 9)
+}
+
+.scoreAndTime {
+    margin:5vh;
+    position: relative;
+    font-size: 26px;
+    width:40vw;
+    height:40px;
+    margin-left:75px;
+    text-align: center;
+    font-weight: bolder;
+}

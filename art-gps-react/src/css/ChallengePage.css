@@ -4,87 +4,12 @@
 }
 
 .Challenge {
-    font-family: 'Prompt', sans-serif;
-    width: 90vw;
-    height: 90vh;
+    
+    width: 100vw;
+    height: 83vh;
     display:flex;
     flex-direction: row;
-}
-
-.challengePic {
-    width:40vw;
-    height:70vh;
-    margin:20px;
-    margin-left: 5vw;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    /* box-shadow: 5px 5px #888888; */
-}
-
-.buttons {
-    max-width:40vw;
-    display:flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    
-}
-
-.answer {
-    position: relative;
-    font-size: 22px;
-    width:40vw;
-    height:70px;
-    margin-left:100px;
-    margin-top:40px;
-    border:0;
-    box-shadow: 5px 5px #888888;
-
-}
-
-.answer img {
-    width:100%;
-    object-fit: cover;
-}
-
-.answer:active {
-    top: 3px;
-    margin-left:103px;
-    width:40vw;
-    height:70px;
-    box-shadow: 2px 2px #888888;
-}
-
-.challengeQuestion {
-    margin-top:2vh;
-    position: relative;
-    font-size: 32px;
-    width:40vw;
-    height:40px;
-    margin-left:100px;
-    
-}
-
-.clickedWrong {
-    position: relative;
-    font-size: 22px;
-    width:40vw;
-    height:70px;
-    margin-left:100px;
-    margin-top:40px;
-    border:0;
-    box-shadow: 5px 5px #888888;
-    background-color:red;
-}
-
-.clickedRight {
-    position: relative;
-    font-size: 22px;
-    width:40vw;
-    height:70px;
-    margin-left:100px;
-    margin-top:40px;
-    border:0;
-    box-shadow: 5px 5px #888888;
-    background-color:green;
+    font-family: 'Prompt', sans-serif;
+    /* background: rgb(104,104,107);
+    background: linear-gradient(90deg, rgba(104,104,107,1) 0%, rgba(209,222,206,1) 53%); */
 }
