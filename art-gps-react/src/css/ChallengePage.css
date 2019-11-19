@@ -13,3 +13,100 @@
     /* background: rgb(104,104,107);
     background: linear-gradient(90deg, rgba(104,104,107,1) 0%, rgba(209,222,206,1) 53%); */
 }
+
+.challengePic {
+    width:40vw;
+    height:75vh;
+    margin:20px;
+    margin-left: 5vw;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* box-shadow: 5px 5px #888888; */
+}
+
+.buttons {
+    margin-top:30px;
+    height:75vh;
+    max-width:60vw;
+    display:flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    
+}
+
+.answer {
+    font-weight: bold;
+    position: relative;
+    font-size: 20px;
+    width:40vw;
+    height:70px;
+    margin-left:65px;
+    margin-top:20px;
+    border:5px, solid, #dbb943;
+    color:rgb(48, 46, 46);
+    background-color:rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+.answer img {
+    width:100%;
+    object-fit: cover;
+}
+
+.answer:active {
+    font-weight: bold;
+    font-size: 22px;
+    margin-left:65px;
+    width:40vw;
+    height:70px;
+    color:rgb(49, 48, 48);
+}
+
+.challengeQuestion {
+    margin:7vh;
+    position: relative;
+    font-size: 32px;
+    width:40vw;
+    height:40px;
+    margin-left:75px;
+    text-align: center;
+    
+}
+
+.challengeQuestion:nth-of-type(1) {
+    font-weight: bold;
+}
+
+
+.clickedWrong {
+    font-weight: bold;
+    position: relative;
+    font-size: 20px;
+    width:40vw;
+    height:70px;
+    margin-left:65px;
+    margin-top: 20px;
+    background-color:rgb(209, 108, 108);
+    color:rgb(49, 48, 48);
+}
+
+.clickedRight {
+    font-weight: bold;
+    position: relative;
+    font-size: 20px;
+    width:40vw;
+    height:70px;
+    margin-left:65px;
+    margin-top: 20px;
+    background-color:rgb(87, 167, 87);
+    color:rgb(49, 48, 48);
+}
+
+.score {
+    color:rgb(14, 139, 14)
+}
+
+.seconds {
+    color:rgb(209, 9, 9)
+}

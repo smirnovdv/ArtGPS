@@ -23,6 +23,11 @@ class App extends Component {
           return <GalleryPage/>
         }
       }/>
+      <Route path='/startChallenge' exact render = {
+        () => {
+          return <ChallengePage/>
+        }
+      }/>
       <Route path='/challenge' exact render = {
         () => {
           return <ChallengePage/>

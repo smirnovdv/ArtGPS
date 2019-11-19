@@ -1,0 +1,74 @@
+.startChallenge {
+    font-family: 'Prompt', sans-serif;
+    width: 100vw;
+    height: 85vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: 'Prompt', sans-serif;
+    font-size:140%;
+    color:rgb(48, 46, 46);;
+    background-image: url('../images/women.jpg');
+    background-position: 0px -320px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding-top:10vh;
+              
+}
+
+.startChallenge div {
+    font-weight: bold;
+    position: relative;
+    font-size: 20px;
+    width:20vw;
+    min-height:70px;
+    border: solid rgb(48, 46, 46) 5px;
+    background-color:rgb(204, 187, 187);
+    border-radius: 10px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: default;
+    margin-top:20px;
+}
+
+.startChallenge div:hover {
+    font-weight: bold;
+    position: relative;
+    font-size: 20px;
+    width:20vw;
+    min-height:70px;
+    border: solid black 5px;
+    background-color:rgb(71, 68, 68);
+    border-radius: 10px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: default;
+    margin-top:20px;
+    color:white;
+}
+
+.startChallenge div:active {
+    font-weight: bold;
+    position: relative;
+    font-size: 22px;
+    width:20vw;
+    min-height:70px;
+    border: solid black 5px;
+    background-color:rgb(151, 142, 142);
+    border-radius: 10px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: default;
+    margin-top:20px;
+}
+
+.startChallenge p {
+    font-style: italic;
+}
