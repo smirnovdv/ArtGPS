@@ -4,6 +4,7 @@ import HomePage from './HomePage';
 import './css/GalleryPage.css';
 import GalleryPage from './GalleryPage';
 import ChallengePage from './ChallengePage';
+import InspirationPage from './InspirationPage'
 const Router = require("react-router-dom").BrowserRouter;
 const Route = require("react-router-dom").Route;
 
@@ -31,6 +32,11 @@ class App extends Component {
       <Route path='/challenge' exact render = {
         () => {
           return <ChallengePage/>
+        }
+      }/>
+      <Route path='/inspiration' exact render = {
+        () => {
+          return <InspirationPage/>
         }
       }/>
     </Router>

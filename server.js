@@ -30,7 +30,8 @@ client.connect()
 app.get('/get_challenge',(req,res)=>{
     
     let query = `SELECT * FROM artworks
-                  ORDER BY RANDOM() LIMIT 3` 
+                 ORDER BY RANDOM() LIMIT 3
+                ` 
               
     client.query(query, function(err, data) {
       console.log(err,data.rows);
@@ -39,6 +40,22 @@ app.get('/get_challenge',(req,res)=>{
     });
 
 });
+
+
+app.get('/get_inspiration',(req,res)=>{
+    
+  let query = `SELECT * FROM modern_artists
+               WHERE id = ${req.query.id}
+              ` 
+            
+  client.query(query, function(err, data) {
+    console.log(err,data.rows);
+    res.send(data.rows);
+    
+  });
+
+});
+
 
 
 app.listen(3001, ()=>{

@@ -65,7 +65,7 @@
 
 .answer:active {
     font-weight: bold;
-    font-size: 21px;
+    font-size: 20px;
     margin-left:65px;
     width:40vw;
     min-height:70px;
@@ -133,7 +133,9 @@
 }
 
 .score {
-    color:rgb(34, 122, 60)
+    font-weight: bold;
+    color:#0e923a;
+    font-size: 120%;
 }
 
 .seconds {
@@ -142,21 +144,6 @@
     animation-iteration-count: 60; 
     opacity: 1;
 }
-    
-    
-@keyframes pulsate {
-    0% { 
-        opacity: 1;
-    }
-    75% { 
-        opacity: 0.6;
-    }
-    100% { 
-        opacity: 1s
-    }
-}
-
-
 
 .scoreAndTime {
     position: relative;
@@ -171,4 +158,109 @@
     font-weight: bolder;
     height:40px;
     
+}
+
+.result {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: fixed;
+    top:40vh;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    width:30vw;
+    height: 30vh;
+    background: rgba(49, 47, 47, 0.7);
+    font-size:50px;
+    color:rgb(204, 187, 187);;
+    font-weight: bold;
+}
+
+.result div {
+    font-weight: bold;
+    font-size: 25px;
+    width:20vw;
+    height:10vh;
+    background-color:rgba(209, 9, 9, 0.8);
+    border-radius: 10px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: default;
+    margin-top:20px;
+    color: white;
+    animation: pulsateButton 1s;
+    animation-iteration-count: infinite; 
+    
+}
+
+.result p {
+    display:block;
+    width: 30vw;
+}
+
+
+.result div:hover {
+    font-weight: bold;
+    font-size: 25px;
+    width:20vw;
+    height:10vh;
+    background-color:rgba(209, 9, 9, 0.9);
+    border-radius: 10px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: default;
+    margin-top:20px;
+    color: white;
+    animation:none;
+
+}
+
+.result div:active {
+    font-weight: bold;
+    font-size: 25px;
+    width:20vw;
+    height:10vh;
+    background-color:rgba(209, 9, 9, 1);
+    border-radius: 10px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: default;
+    margin-top:20px;
+    color: white;
+    animation:none;
+}
+
+
+@keyframes pulsate {
+    0% { 
+        opacity: 1;
+    }
+    75% { 
+        opacity: 0.6;
+    }
+    100% { 
+        opacity: 1s
+    }
+}
+
+@keyframes pulsateButton {
+    0% { 
+        opacity:1;
+    }
+    50% { 
+        opacity:0;
+    }
+    100% { 
+        opacity:1;
+    }
 }

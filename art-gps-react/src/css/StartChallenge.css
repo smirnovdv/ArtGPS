@@ -1,7 +1,7 @@
 .startChallenge {
     font-family: 'Prompt', sans-serif;
     width: 100vw;
-    height: 85vh;
+    height: 84vh;
     display:flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -10,8 +10,8 @@
     font-size:140%;
     color:rgb(48, 46, 46);;
     background-image: url('../images/women.jpg');
-    background-position: 0px -320px;
-    background-size: 100%;
+    background-position: 0px -317px;
+    background-size: cover;
     background-repeat: no-repeat;
     padding-top:10vh;
               
@@ -20,11 +20,10 @@
 .startChallenge div {
     font-weight: bold;
     position: relative;
-    font-size: 20px;
+    font-size: 25px;
     width:20vw;
     min-height:70px;
-    border: solid rgb(48, 46, 46) 5px;
-    background-color:rgb(204, 187, 187);
+    background-color:rgba(209, 9, 9, 0.8);
     border-radius: 10px;
     display:flex;
     align-items: center;
@@ -32,16 +31,16 @@
     text-align: center;
     cursor: default;
     margin-top:20px;
+    color: white;
 }
 
 .startChallenge div:hover {
     font-weight: bold;
     position: relative;
-    font-size: 20px;
+    font-size: 26px;
     width:20vw;
     min-height:70px;
-    border: solid black 5px;
-    background-color:rgb(71, 68, 68);
+    background-color:rgb(209, 9, 9);
     border-radius: 10px;
     display:flex;
     align-items: center;
@@ -50,16 +49,16 @@
     cursor: default;
     margin-top:20px;
     color:white;
+    transition-duration: 0.1s;
 }
 
 .startChallenge div:active {
     font-weight: bold;
     position: relative;
-    font-size: 22px;
+    font-size: 25px;
     width:20vw;
     min-height:70px;
-    border: solid black 5px;
-    background-color:rgb(151, 142, 142);
+    background-color:rgb(209, 9, 9);
     border-radius: 10px;
     display:flex;
     align-items: center;
@@ -67,6 +66,7 @@
     text-align: center;
     cursor: default;
     margin-top:20px;
+    transition-duration: 0.1s;
 }
 
 .startChallenge p {

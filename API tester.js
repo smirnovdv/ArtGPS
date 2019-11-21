@@ -48,31 +48,31 @@ api.newRequest()
   }
   else {
     console.log(data)
-    // //function escaps quotation mark and removing extra whitespace
-    // const trimData(string) => string.replace(/'/g, "").trim();
-    // //mapping all artworks and inserting required artworks data into db
-    // data._embedded.artworks.map((artwork,index)=>{
-    //   if (artwork._links.image && artwork.category == "Painting" && artwork.title && artwork.medium && artwork._links.image && artwork.title && artwork.date){
-    //     let query = `
-    //     INSERT INTO artworks (artsy_id,
-    //                           category,
-    //                           medium,
-    //                           image_url,
-    //                           title,date)
-    //     VALUES ('${trimData(artwork.id)}',
-    //             'Painting',
-    //             '${trimData(artwork.medium)}',
-    //             '${trimData(artwork._links.image.href)}',
-    //             '${trimData(artwork.title)}',
-    //             '${trimData(artwork.date)}')`;
+    //function escaps quotation mark and removing extra whitespace
+    const trimData(string) => string.replace(/'/g, "").trim();
+    //mapping all artworks and inserting required artworks data into db
+    data._embedded.artworks.map((artwork,index)=>{
+      if (artwork._links.image && artwork.category == "Painting" && artwork.title && artwork.medium && artwork._links.image && artwork.title && artwork.date){
+        let query = `
+        INSERT INTO artworks (artsy_id,
+                              category,
+                              medium,
+                              image_url,
+                              title,date)
+        VALUES ('${trimData(artwork.id)}',
+                'Painting',
+                '${trimData(artwork.medium)}',
+                '${trimData(artwork._links.image.href)}',
+                '${trimData(artwork.title)}',
+                '${trimData(artwork.date)}')`;
         
-    //     client.query(query, function(err, data) {
-    //       if(err) {
-    //         console.log('Insert error: ', err, query);
-    //       };
-    //     });
-    //   };
-    // });
+        client.query(query, function(err, data) {
+          if(err) {
+            console.log('Insert error: ', err, query);
+          };
+        });
+      };
+    });
   };
 });
 

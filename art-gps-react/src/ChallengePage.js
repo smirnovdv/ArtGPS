@@ -5,11 +5,6 @@ import ChallengePic from './ChallengePic';
 import StartChallenge from './StartChallenge';
 
 
-const Router = require("react-router-dom").BrowserRouter;
-const Route = require("react-router-dom").Route;
-
-
-
 class ChallengePage extends Component{
     constructor() {
         super();
@@ -26,10 +21,7 @@ class ChallengePage extends Component{
         return (
             <div className="challengePage">
                 <Navbar activePage="challenge"/>
-                {/* <ChallengeScore/> */}
                 {this.state.renderedPage}
-                {/* <ChallengeQnA/>
-                <ChallengeRightAnswer/> */}
             </div>
         )}
     
