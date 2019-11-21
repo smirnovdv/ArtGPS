@@ -37,6 +37,7 @@
 }
 
 .nextButton {
+    cursor: pointer;
     position: absolute;
     display: block;
     bottom:10vh;
@@ -48,6 +49,7 @@
 }
 
 .nextButton:active {
+    cursor: pointer;
     position: absolute;
     display: block;
     bottom:10vh;
@@ -85,6 +87,7 @@
 }
 
 .backButton {
+    cursor: pointer;
     position: absolute;
     display: block;
     bottom:10vh;
@@ -96,6 +99,7 @@
 }
 
 .backButton:active {
+    cursor: pointer;
     position: absolute;
     display: block;
     bottom:10vh;

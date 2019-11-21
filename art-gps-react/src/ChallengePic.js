@@ -26,7 +26,6 @@ export default class ChallengePic extends Component {
             response.text().then((artwork)=> {
                 let d = new Date();
                 let rightAnswer = JSON.parse(artwork).splice(Math.floor(Math.random()*3),1)
-                console.log(rightAnswer)
                 this.setState({artworks:JSON.parse(artwork),
                                rightAnswer:rightAnswer[0],
                                time:d.getTime()}
@@ -64,6 +63,7 @@ export default class ChallengePic extends Component {
         let target = e.target;
         let d = new Date();
         if (target.innerText === this.state.rightAnswer.title.trim()) {
+            this.fetchPic()
             target.classList="clickedRight";
             setTimeout(()=>{
                 if (this.state.seconds>0){
@@ -71,7 +71,7 @@ export default class ChallengePic extends Component {
                     score: prevState.score  + Math.min(Math.round(100000/(d.getTime() - prevState.time)),100)
                 }));
                     target.classList="answer";
-                    this.fetchPic()
+                    
                 }
             },1000)
         }

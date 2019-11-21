@@ -56,6 +56,24 @@ app.get('/get_inspiration',(req,res)=>{
 
 });
 
+app.get('/challenge_leaderboard',(req,res)=>{
+    
+  let query = `SELECT * FROM users
+               LIMIT 5
+              ` 
+            
+  client.query(query, function(err, data) {
+    console.log(err,data.rows);
+    res.send(data.rows);
+    
+  });
+
+})
+
+app.post('/challenge_leaderboard'),(req,res)=>{
+  challenge_leaderboard  
+}
+
 
 
 app.listen(3001, ()=>{
