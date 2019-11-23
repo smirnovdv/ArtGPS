@@ -45,7 +45,7 @@ function ArtistsMovementsList() {
                         
                     </li>
                 </Link>
-                <Link>
+                <Link to="/gallery/artist?name=picasso">
                     <li>
                         
                             <span className="artist">Pablo Picasso</span>.......<span className="movement">Cub<span className="colored">i</span>sm </span>

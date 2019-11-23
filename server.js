@@ -47,7 +47,7 @@ app.get('/get_inspiration',(req,res)=>{
   let query = `SELECT * FROM modern_artists
                WHERE id = ${req.query.id}
               ` 
-            
+  console.log(query)        
   client.query(query, function(err, data) {
     console.log(err,data.rows);
     res.send(data.rows);

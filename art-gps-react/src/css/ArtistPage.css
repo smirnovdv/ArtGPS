@@ -1,0 +1,108 @@
+.artistGallery {
+    width: 50vw;
+    float:right;
+    margin-right: 5vw;
+    
+}
+
+.artistGallery img {
+    margin: 1vw;
+}
+.warhol .artistGallery img:hover {
+    margin: 1vw;
+    outline: #d3a80b 10px solid;
+}
+.picasso .artistGallery img:hover {
+    margin: 1vw;
+    outline: #e72315 10px solid;
+}
+.nextButtonwarhol {
+    width:fit-content;
+    font-family: 'Prompt', sans-serif;
+    color:#d3a80b;
+    position: absolute;
+    right:10vw;
+    bottom:10vh;
+}
+
+
+
+.warhol > p {
+    font-family: 'Prompt', sans-serif;
+    padding:15px;
+    background-color: #d3a80b;
+    color:white;
+    font-size: 35px;
+    font-weight: bold;
+    display:block;
+    line-height: 55px;
+    width: 20vw;
+    text-align: right;
+    position: absolute;
+    left:0vw;
+    top:23vh;
+}
+
+.warhol {
+    width:100vw;
+    height:100vh;
+    background-color: black;
+}
+
+.warholPic {
+    width:700px;
+    height:450px;
+    position:absolute;
+    bottom:0px;
+    z-index: 1;
+    left: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('../images/Andy.jpg');
+    background-position: 0px 80px;
+}
+
+.picassoPic {
+    width:100vw;
+    height:100vh;
+    background-color: white;
+}
+
+.picassoPic {
+    width:500px;
+    height:450px;
+    position:absolute;
+    bottom:50px;
+    z-index: 1;
+    left: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('../images/Pablo.jpg');
+    background-position: 0px 80px;
+}
+
+.picasso > p {
+    z-index: 2;
+    font-family: 'Prompt', sans-serif;
+    padding:15px;
+    background-color: #e72315;
+    color:white;
+    font-size: 35px;
+    font-weight: bold;
+    display:block;
+    line-height: 55px;
+    width: 20vw;
+    text-align: right;
+    position: absolute;
+    left:0vw;
+    top:23vh;
+}
+
+.nextButtonpicasso {
+    width:fit-content;
+    font-family: 'Prompt', sans-serif;
+    color:#d3220b;;
+    position: absolute;
+    right:10vw;
+    bottom:10vh;
+}

@@ -26,7 +26,7 @@ class App extends Component {
         }
       }/>
       <Route path='/gallery/artist' component={ArtistPage}/>
-      
+      <Route path='/inspiration' component={InspirationPage}/>
       <Route path='/startChallenge' exact render = {
         () => {
           return <ChallengePage/>
@@ -37,10 +37,10 @@ class App extends Component {
           return <ChallengePage/>
         }
       }/>
-      <Route path='/inspiration' exact render = {
+      {/* <Route path='/inspiration' exact render = {
         () => {
           return <InspirationPage/>
-        }
+        } */}
       }/>
     </Router>
     );
