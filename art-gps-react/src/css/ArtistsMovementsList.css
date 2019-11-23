@@ -18,7 +18,11 @@
     color:rgb(66, 70, 85);
 }
 
-.ArtistsMovementsList ul li {
+.ArtistsMovementsList ul a  {
+    text-decoration: none;
+}
+
+.ArtistsMovementsList ul a li {
     white-space: pre;
     position:relative;
     width:fit-content;
@@ -29,14 +33,14 @@
     font-size:4rem;
     line-height: 1.5rem}
 
-.ArtistsMovementsList ul li:hover {
+.ArtistsMovementsList ul a li:hover {
     cursor: pointer;
     border-bottom: solid 2px rgb(190,29,47);
   }
-.ArtistsMovementsList ul li:hover .upArrow {
+.ArtistsMovementsList ul a li:hover .upArrowGallery {
     visibility: visible;
 }
-.ArtistsMovementsList ul li:hover .downArrow {
+.ArtistsMovementsList ul a li:hover .downArrowGallery {
     visibility: visible;
 }
 
@@ -51,7 +55,7 @@
     color:rgb(66, 70, 85);
 }
 
-.upArrow {
+.upArrowGallery {
     visibility: hidden;
     position:absolute;
     right:1px;
@@ -63,7 +67,7 @@
     transform-origin: right top;
     
 }
-.downArrow {
+.downArrowGallery {
     visibility: hidden;
     position:absolute;
     right:1px;

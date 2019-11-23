@@ -62,27 +62,30 @@ export default class ChallengePic extends Component {
     handleClick = (e) => {
         let target = e.target;
         let d = new Date();
-        if (target.innerText === this.state.rightAnswer.title.trim()) {
-            this.fetchPic()
-            target.classList="clickedRight";
-            setTimeout(()=>{
-                if (this.state.seconds>0){
+        if (this.state.seconds>0){
+            if (target.innerText === this.state.rightAnswer.title.trim()) {
+                this.fetchPic()
                 this.setState((prevState, props) => ({
                     score: prevState.score  + Math.min(Math.round(100000/(d.getTime() - prevState.time)),100)
                 }));
-                    target.classList="answer";
+                target.classList="clickedRight";
+                setTimeout(()=>{
                     
+                        target.classList="answer";
+                        
+                    
+                },1000)
+            }
+        
+            else {
+                if (this.state.seconds>0 && target.classList!="clickedWrong"){
+                this.setState((prevState, props) => ({
+                    score: prevState.score - Math.min(Math.round(50000/(d.getTime() - prevState.time)),100)
+                }));
+                target.classList="clickedWrong";
+                setTimeout(()=>{
+                    target.classList="answer"},1000)
                 }
-            },1000)
-        }
-        else {
-            if (this.state.seconds>0 && target.classList!="clickedWrong"){
-            this.setState((prevState, props) => ({
-                score: prevState.score - Math.min(Math.round(50000/(d.getTime() - prevState.time)),100)
-            }));
-            target.classList="clickedWrong";
-            setTimeout(()=>{
-                target.classList="answer"},1000)
             }
         }
     }

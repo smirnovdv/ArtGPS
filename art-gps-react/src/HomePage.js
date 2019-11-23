@@ -16,7 +16,7 @@ class HomePage extends Component {
         return (
             <div className="homepage">
                 <Navbar activePage="home"/>
-                <Gallery pics = {this.state.gallery}/>
+                <Gallery pics = {this.state.gallery} artist={"home"}/>
                 <StartButton/>
             </div>
         )

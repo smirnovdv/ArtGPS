@@ -74,8 +74,6 @@ app.post('/challenge_leaderboard'),(req,res)=>{
   challenge_leaderboard  
 }
 
-
-
 app.listen(3001, ()=>{
     console.log("Server is running on port 3001")
 })
