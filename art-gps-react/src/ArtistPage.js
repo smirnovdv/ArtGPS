@@ -10,7 +10,7 @@ export default class ArtistPage extends React.Component {
         warhol:{name:"Andy Warhol",
                 gallery:["2.jpeg","4.jpeg","3.jpeg","5.jpeg","6.jpeg","7.jpeg"]},
         picasso:{name:"Pablo Picasso",
-                gallery:["10.jpeg","2.jpeg","3.jpeg","4.jpeg","5.jpeg","6.jpeg"]},
+                gallery:["10.jpeg","2.jpeg","3.jpeg","4.jpeg","9.jpeg","5.jpeg"]},
                 dali:{name:"Salvador Dali",
                 gallery:[]}
         }
