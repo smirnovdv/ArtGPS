@@ -6,11 +6,12 @@ let port = process.env.PORT || 3001;
 //db connection
 const { Client } = require('pg');
 let connectionObject = {
-    host : "127.0.0.1",
-    database : "art_gps",
+    host : "ec2-107-20-239-47.compute-1.amazonaws.com",
+    database : "dcqcqfuvh1n779",
+    ssl: "any", 
     port : 5432,
-    user : "postgres",
-    password : "2000"
+    user : "cxngcbwrxsmpac",
+    password : "80c6f4106a03155d0ef38f3d31039e40590ab4ec34fc6ceba9d7354f473a94e4"
 };
 
 const client = new Client(connectionObject);
