@@ -1,8 +1,8 @@
-@media  screen and (min-width: 1300px) {
+@media  screen and (min-width: 1150px) {
 .homepage {
     font-family: 'Prompt', sans-serif;
     background-image: url('../images/women.jpg');
-    background-position: 0px -200px;
+    background-position: bottom;
     background-size: 100%;
     background-repeat: no-repeat;
     width: 100vw;

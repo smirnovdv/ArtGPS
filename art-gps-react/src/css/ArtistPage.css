@@ -1,9 +1,21 @@
-.artistGallery {
+.artistGallery .gallery {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 5vh ;
     width: 50vw;
     float:right;
     margin-right: 5vw;
     
 }
+.artistGallery .gallery img {
+    height:12vmax;
+    width:12vmax;
+    object-fit: cover;
+}
+
 
 .artistGallery img {
     margin: 1vw;

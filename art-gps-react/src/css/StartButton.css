@@ -1,10 +1,10 @@
 .homeButton {
     width:300px;
     height:100px;
-    margin-left:100px;
-    margin-top:50px;
+    margin-left:10.05vw;
+    margin-top:5.05vw;
     border:0;
-    box-shadow: 5px 5px #888888;
+    box-shadow: 0.05vw 0.05vw #888888;
 }
 .homeButton img {
     width:100%;
@@ -12,9 +12,22 @@
 }
 
 .homeButton:active {
-    margin-top:53px;
-    margin-left:103px;
+    margin-top:5vw;
+    margin-left:10vw;
     width:300px;
     height:100px;
-    box-shadow: 3px 3px #888888;
+    box-shadow: 0 0 #888888;
+}
+
+@media screen and (max-width: 1050px) {
+    .homeButton {
+        margin: 5vw auto;
+        display:block;
+    }
+    .homeButton:active {
+        margin: 5vw auto;
+        width:300px;
+        height:100px;
+        box-shadow: 0 0 #888888;
+    }
 }

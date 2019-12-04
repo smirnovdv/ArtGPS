@@ -1,7 +1,7 @@
 .gallery {
     display:flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: space-evenly;
     align-items: center;
     margin-top: 5vh ;
@@ -9,8 +9,8 @@
 }
 
 .gallery img {
-    height:200px;
-    width:200px;
+    max-height:15vmax;
+    max-width:15vmax;
     object-fit: cover;
     
 }
@@ -24,3 +24,12 @@
     transition-duration: 0.3s;
 }
 z */
+
+@media screen and (max-width: 1150px) {
+    .gallery {
+        max-width: 550px;
+        flex-wrap: wrap;
+        margin: 5vh auto;
+        
+    }
+}

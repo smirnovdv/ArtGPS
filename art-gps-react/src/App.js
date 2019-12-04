@@ -37,11 +37,6 @@ class App extends Component {
           return <ChallengePage/>
         }
       }/>
-      {/* <Route path='/inspiration' exact render = {
-        () => {
-          return <InspirationPage/>
-        } */}
-      }/>
     </Router>
     );
   };

@@ -1,3 +1,4 @@
+
 .colored {
     color:#DBB943;
 }
@@ -12,7 +13,7 @@
 }
 
 .ArtistsMovementsList p {
-    font-size: 2rem;
+    font-size: 160%;
     font-weight: bolder;
     margin: 30px;
     color:rgb(66, 70, 85);
@@ -25,17 +26,16 @@
 .ArtistsMovementsList ul a li {
     white-space: pre;
     position:relative;
-    width:fit-content;
-    border-bottom: solid 2px rgba(66, 70, 85, 0);
+    border-bottom: solid 3px rgba(66, 70, 85, 0);
     margin: 17px;
     list-style: none;
     color:#DBB943;
-    font-size:4rem;
-    line-height: 1.5rem}
+    font-size: 160%;
+    line-height: 120%}
 
 .ArtistsMovementsList ul a li:hover {
     cursor: pointer;
-    border-bottom: solid 2px rgb(190,29,47);
+    border-bottom: solid 3px rgb(190,29,47);
   }
 .ArtistsMovementsList ul a li:hover .upArrowGallery {
     visibility: visible;
@@ -45,7 +45,7 @@
 }
 
 .movement, .artist {
-    font-size:1.5rem;
+    font-size: 120%;
     font-weight: bold;
     color:rgb(66, 70, 85);
 }
@@ -59,9 +59,9 @@
     visibility: hidden;
     position:absolute;
     right:1px;
-    bottom:-2px;
-    width: 8px;
-    height:2px;
+    bottom:-3px;
+    width: 10px;
+    height:3px;
     background-color:rgb(190,29,47);
     transform: rotate(-45deg);
     transform-origin: right top;
@@ -71,11 +71,48 @@
     visibility: hidden;
     position:absolute;
     right:1px;
-    bottom:-2px;
-    width: 8px;
-    height: 2px;
+    bottom:-3px;
+    width: 10px;
+    height: 3px;
     background-color:rgb(190,29,47);
     transform-origin: right bottom;
     transform: rotate(45deg);
     
+}
+
+@media  screen and (max-width: 1150px) {
+    .ArtistsMovementsList p {
+        font-size: 150%;
+    }
+    .ArtistsMovementsList {
+        font-family: 'Prompt', sans-serif;
+        width:fit-content;
+        float:none;
+        margin: auto;
+        border: none;
+    }
+    .ArtistsMovementsList ul a li {
+        color:rgb(66, 70, 85);
+        padding:3px;
+        border: solid 3px #DBB943;
+        border-radius: 20px;
+        width: fit-content;
+        font-size:110%;
+        line-height: 1.5rem}
+    .ArtistsMovementsList ul a li:hover {
+        background-color: #DBB943;
+        border: solid 3px #DBB943;
+    }
+    .movement, .artist {
+        font-size:110%;
+    }
+    .ArtistsMovementsList ul a li:hover .upArrowGallery {
+        visibility: hidden;
+    }
+    .ArtistsMovementsList ul a li:hover .downArrowGallery {
+        visibility: hidden;
+    }
+    .colored {
+        color:rgb(66, 70, 85);
+    }
 }

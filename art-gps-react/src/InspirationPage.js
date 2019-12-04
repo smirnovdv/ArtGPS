@@ -77,19 +77,23 @@ export default class ChallengePage extends Component{
                         <p>{this.state.description}</p>
                         <p className="inspirationLocation">{this.state.location}</p>
                     </div>
+                    <div className = "inspirationNavigation">
+                        <div className = "nextButton" style = {{display:this.state.id == 12?'none':'block'}}>
+                            <p onClick = {this.fetchModernArtists}>Next</p> 
+                            <div className='upArrow'></div>
+                            <div className='downArrow'></div>
+                        </div>
+                        <div className = "backButton" style = {{display:this.state.id == 1?'none':'block'}}>
+                            <p onClick = {this.fetchModernArtists}>Back</p> 
+                            <div className='upArrowReversed'></div>
+                            <div className='downArrowReversed'></div>
+                        </div>
+                    </div>
                     <div className = "inspirationPic" style = {{backgroundImage:'url("' + this.state.link + '")'}}>
- 
+
                     </div>
-                    <div className = "nextButton" style = {{display:this.state.id == 12?'none':'block'}}>
-                        <p onClick = {this.fetchModernArtists}>Next</p> 
-                        <div className='upArrow'></div>
-                        <div className='downArrow'></div>
-                    </div>
-                    <div className = "backButton" style = {{display:this.state.id == 1?'none':'block'}}>
-                        <p onClick = {this.fetchModernArtists}>Back</p> 
-                        <div className='upArrowReversed'></div>
-                        <div className='downArrowReversed'></div>
-                    </div>
+
+
                 </div>
             </div>
         )}

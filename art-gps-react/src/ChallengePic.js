@@ -64,17 +64,15 @@ export default class ChallengePic extends Component {
         let d = new Date();
         if (this.state.seconds>0){
             if (target.innerText === this.state.rightAnswer.title.trim()) {
-                this.fetchPic()
+                
                 this.setState((prevState, props) => ({
                     score: prevState.score  + Math.min(Math.round(100000/(d.getTime() - prevState.time)),100)
                 }));
                 target.classList="clickedRight";
                 setTimeout(()=>{
-                    
+                        this.fetchPic()
                         target.classList="answer";
-                        
-                    
-                },1000)
+                },500)
             }
         
             else {
@@ -84,7 +82,7 @@ export default class ChallengePic extends Component {
                 }));
                 target.classList="clickedWrong";
                 setTimeout(()=>{
-                    target.classList="answer"},1000)
+                    target.classList="answer"},500)
                 }
             }
         }
@@ -104,7 +102,7 @@ export default class ChallengePic extends Component {
         return (
             <div className="Challenge">
                 <div className="buttons"> 
-                    <p className="challengeQuestion">What is the name of this artwork?</p>
+                    <p className="challengeQuestion">Name of this artwork?</p>
                     <div className="answer" onClick={this.handleClick}>{this.state.artworks[0].title}</div>
                     <div className="answer" onClick={this.handleClick}>{this.state.artworks[1].title}</div>
                     <div className="answer" onClick={this.handleClick}>{this.state.artworks[2].title}</div>

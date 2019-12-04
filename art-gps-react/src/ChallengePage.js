@@ -9,7 +9,7 @@ class ChallengePage extends Component{
     constructor() {
         super();
         this.state = {
-            renderedPage : <StartChallenge startFunction = {this.start}/>
+            renderedPage : <div> <Navbar activePage="challenge"/> <StartChallenge startFunction = {this.start}/> </div>
         }
     }
     start = ()=>{
@@ -20,7 +20,6 @@ class ChallengePage extends Component{
     render(){
         return (
             <div className="challengePage">
-                <Navbar activePage="challenge"/>
                 {this.state.renderedPage}
             </div>
         )}

@@ -19,9 +19,10 @@ a {
     border: 3px solid rgb(66, 70, 85);
     text-transform: capitalize;
     font-family: 'Prompt', sans-serif;
+    transition-duration: 0.4s;
     
-}
-.navitem:hover {
+}   
+.navitem:focus {
    color: #DBB943;
    border: 3px rgb(190,29,47) solid;
 }
@@ -31,4 +32,11 @@ a {
  }
 .active {
     border: 3px rgb(190,29,47) solid;
+}
+
+
+@media screen and (max-width: 1148px) {
+    .hideNav {
+        display: none;
+    }
 }
