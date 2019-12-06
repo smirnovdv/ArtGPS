@@ -12,7 +12,7 @@
     max-height:15vmax;
     max-width:15vmax;
     object-fit: cover;
-    
+    margin: 1vmin;
 }
 
 /* .gallery img:hover {

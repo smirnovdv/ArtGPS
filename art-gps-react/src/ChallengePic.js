@@ -14,7 +14,7 @@ export default class ChallengePic extends Component {
         }
     }
     fetchPic() {
-        fetch(`/get_challenge`)
+        fetch(`https://art-gps-server.herokuapp.com/get_challenge`)
         .then(
             (response)=> {
             if (response.status !== 200) {

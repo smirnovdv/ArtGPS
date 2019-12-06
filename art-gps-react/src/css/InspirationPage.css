@@ -186,7 +186,7 @@
     }
     
     .inspirationDescription p,h1,h2  {
-        margin:5vmin;
+        margin:1vmin;
     }
     
     .inspirationDescription h1::first-letter {

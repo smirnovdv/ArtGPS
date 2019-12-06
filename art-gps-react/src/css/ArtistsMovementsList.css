@@ -82,7 +82,7 @@
 
 @media  screen and (max-width: 1150px) {
     .ArtistsMovementsList p {
-        font-size: 150%;
+        font-size: 100%;
     }
     .ArtistsMovementsList {
         font-family: 'Prompt', sans-serif;
@@ -97,14 +97,14 @@
         border: solid 3px #DBB943;
         border-radius: 20px;
         width: fit-content;
-        font-size:110%;
+        font-size:100%;
         line-height: 1.5rem}
     .ArtistsMovementsList ul a li:hover {
         background-color: #DBB943;
         border: solid 3px #DBB943;
     }
     .movement, .artist {
-        font-size:110%;
+        font-size:100%;
     }
     .ArtistsMovementsList ul a li:hover .upArrowGallery {
         visibility: hidden;

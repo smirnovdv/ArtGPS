@@ -293,7 +293,7 @@
 
     .answer {
         font-weight: bold;
-        font-size: 20px;
+        font-size: 16px;
         width:90vw;
         height: fit-content;
         color:rgb(48, 46, 46);
@@ -305,11 +305,12 @@
         text-align: center;
         cursor: default;
         margin:5px 15px ;
+        min-height: 50px;
     }
 
     .answer:hover {
         font-weight: bold;
-        font-size: 20px;
+        font-size: 16px;
         width:90vw;
         height: fit-content;
         color:rgb(48, 46, 46);
@@ -321,6 +322,7 @@
         text-align: center;
         cursor: default;
         margin:5px 15px ;
+        min-height: 50px;
     }
 
     .answer img {
@@ -331,7 +333,7 @@
     .answer:active {
         cursor: default;
         font-weight: bold;
-        font-size: 20px;
+        font-size: 16px;
         width:90vw;
         height: fit-content;
         color:rgb(49, 48, 48);
@@ -342,10 +344,11 @@
         text-align: center;
         border-radius: 10px;
         margin:5px 15px ;
+        min-height: 50px;
     }
 
     .challengeQuestion {
-        font-size: 22px;
+        font-size: 20px;
         width:90vw;
         height:fit-content;
         text-align: center;
@@ -361,7 +364,7 @@
 
     .clickedWrong {
         font-weight: bold;
-        font-size: 20px;
+        font-size: 16px;
         width:90vw;
         height: fit-content;
         color:rgb(48, 46, 46);
@@ -374,11 +377,12 @@
         cursor: default;
         margin:5px 15px ;
         background-color:rgb(209, 108, 108);
+        min-height: 50px;
     }
 
     .clickedRight {
         font-weight: bold;
-        font-size: 20px;
+        font-size: 16px;
         width:90vw;
         height: fit-content;
         color:rgb(48, 46, 46);
@@ -391,6 +395,7 @@
         cursor: default;
         margin:5px 15px ;
         background-color:rgb(87, 167, 87);
+        min-height: 50px;
 
     }
 

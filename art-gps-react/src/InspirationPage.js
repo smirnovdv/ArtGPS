@@ -20,7 +20,9 @@ export default class ChallengePage extends Component{
     }
 
     fetchDirectId = (id) => {
-        fetch(`/get_inspiration?id=${id}`)
+        fetch(`https://art-gps-server.herokuapp.com/get_inspiration?id=${id}`,{
+              mode: 'cors'
+       })
         .then(
             (response)=> {
             if (response.status !== 200) {
@@ -38,7 +40,10 @@ export default class ChallengePage extends Component{
     }
 
     fetchModernArtists = (e) => {
-        fetch(`/get_inspiration?id=${e.target.innerText === "Next" ? Math.min(this.state.id + 1 , 12) : Math.max(this.state.id - 1 , 0)}`)
+        fetch(`https://art-gps-server.herokuapp.com/get_inspiration?id=${e.target.innerText === "Next" ? Math.min(this.state.id + 1 , 12) : Math.max(this.state.id - 1 , 0)}`,
+        {
+            mode: 'cors'
+     })
         .then(
             (response)=> {
             if (response.status !== 200) {

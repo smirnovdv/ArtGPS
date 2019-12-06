@@ -95,7 +95,6 @@
     
     .startChallenge div {
         font-weight: bold;
-        position: relative;
         font-size: 25px;
         width:70vw;
         min-height:70px;
@@ -108,8 +107,6 @@
         cursor: default;
         margin-top:20px;
         color: white;
-        position: absolute;
-        top:50vh;
         font-size: 30px;
         opacity: 0;
         animation: but;
@@ -119,9 +116,8 @@
     
     .startChallenge div:hover {
         font-weight: bold;
-        position: relative;
         font-size: 26px;
-        width:20vw;
+        width:70vw;
         min-height:70px;
         background-color:rgb(209, 9, 9);
         border-radius: 10px;
@@ -133,8 +129,6 @@
         margin-top:20px;
         color:white;
         transition-duration: 0.1s;
-        position: absolute;
-        top:50vh;
         font-size: 30px;
         opacity: 0;
         animation: but;
@@ -144,9 +138,8 @@
     
     .startChallenge div:active {
         font-weight: bold;
-        position: relative;
         font-size: 25px;
-        width:20vw;
+        width:70vw;
         min-height:70px;
         background-color:rgb(209, 9, 9);
         border-radius: 10px;
@@ -157,8 +150,6 @@
         cursor: default;
         margin-top:20px;
         transition-duration: 0.1s;
-        position: absolute;
-        top:50vh;
         font-size: 30px;
         opacity: 0;
         animation: but;
@@ -172,8 +163,6 @@
         animation-delay: 0s;
         animation-duration: 2s;
         opacity: 0;
-        position: absolute;
-        top:50vh;
         font-size: 30px;
     }
     .startChallenge > h2 {
@@ -181,20 +170,16 @@
         animation-delay: 2s;
         animation-duration: 2s;
         opacity: 0;
-        position: absolute;
-        top:50vh;
         font-size: 30px;
     }
     .startChallenge > p {
-        margin: 10px;
         text-align: center;
         animation: p;
         animation-delay: 4s;
         animation-duration: 2s;
         opacity: 0;
-                position: absolute;
-        top:50vh;
         font-size: 30px;
+        font-style: bolder;
     }
 
     @keyframes h1 {
