@@ -1,0 +1,71 @@
+.test {
+    font-family: 'Prompt', sans-serif;
+
+}
+.testPic {
+    min-width:30vmax;
+    min-height:30vmax;
+    display: inline-block;
+    background-size: cover;
+    margin:1vmax;
+}
+.testPic:active {
+    min-width:30vmax;
+    min-height:30vmax;
+    display: inline-block;
+    background-size: cover;
+    margin:1vmax;
+    outline: #DBB943 10px solid;
+}
+
+.test > h1 {
+    display: block;
+    width:fit-content;
+    color:#DBB943;
+    margin: 2vmin auto ;
+    font-size: 150%;
+    text-align: center;
+}
+.testPics {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.testResult {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: absolute;
+    top: 14vh;
+    width:100%;
+    height: 100%;
+    background-color:rgba(66, 70, 85,0.8);
+}
+
+.testResult a {
+    text-decoration: none;    
+}   
+
+.testResult h2 {
+    color:#DBB943;
+    margin:5px;
+}
+
+.testResult>h1 {
+    color:white;
+    margin-bottom:5px;
+}
+
+.testResult a>div {
+    margin:5px;
+}
+
+.testResult>p{
+    color:white;
+    margin-top:5vh;
+}

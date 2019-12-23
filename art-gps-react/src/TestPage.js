@@ -1,19 +1,13 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import Navbar from './Navbar';
+import TestPics from './TestPics';
+import './css/TestPage.css';
 
-export default class TestPage extends Component {
-    constructor(){
-        super(props),
-        this.state = {
-            testPairNum: 0,
-            scoreTable: {}
-        }
-    }
-    render() {
-        return (
-            <div>
-                 <div onClick={nextPair} className = "testPic" style = {{backgroundImage:'url("' + ? + '")'}}></div>
-                 <div onClick={nextPair} className = "testPic" style = {{backgroundImage:'url("' + ? + '")'}}></div>
-            </div>
-        )
-    }
+export default function TestPage() {
+    return (
+        <div>
+            <Navbar />
+            <TestPics />
+        </div>
+    )
 }
