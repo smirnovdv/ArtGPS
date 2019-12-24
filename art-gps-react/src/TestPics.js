@@ -90,10 +90,8 @@ export default class TestPics extends Component {
                 <div className="testResult" style = {this.state.resultCSS}>
                     <h1>Your favorite artist:</h1>
                     <h2>{this.findMostFrequent(this.state.scoreArray)[0]}</h2>
-                    <p>Learn more about him</p> 
+                    <p>Learn more about these artworks</p> 
                     <NavItem name="gallery"/>
-                    <p>Find more about pictures you like</p> 
-                    <NavItem name="inspiration"/>
                     <p>Already an expert? Check you knowledge</p>  
                     <NavItem name="challenge"/>
                 </div>            

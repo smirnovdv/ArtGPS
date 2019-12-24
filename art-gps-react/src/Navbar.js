@@ -13,8 +13,8 @@ class Navbar extends React.Component {
             }
     } 
     navItems = [
+        "exploration",
         "gallery",
-        "inspiration",
         "challenge"
     ]
 
@@ -40,7 +40,9 @@ class Navbar extends React.Component {
                     <div class="bar2"></div>
                     <div class="bar3"></div>
                 </div>
-                {navComponents}
+                <div className="navItems">
+                    {navComponents}
+                </div>
             </div>
 
         )

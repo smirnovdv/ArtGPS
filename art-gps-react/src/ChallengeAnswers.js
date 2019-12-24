@@ -29,7 +29,6 @@ export default class ChallengePic extends Component {
                 target.classList="answer"},1000)
         }
     }
-    // const answer = <button className="answer">{props.artworks[randomArray.splice(Math.floor(Math.random()*3),1)].title}</button>
     render(){
         return (
             <div className="Challenge">

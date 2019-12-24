@@ -16,22 +16,18 @@ a {
     font-weight: bolder;
     margin-top:4vh;
     margin-bottom:1vh;
-    border: 3px solid rgb(66, 70, 85);
+    outline: 3px solid rgb(66, 70, 85);
     text-transform: capitalize;
     font-family: 'Prompt', sans-serif;
     transition-duration: 0.4s;
     
 }   
-.navitem:focus {
+.navitem:hover {
    color: #DBB943;
-   border: 3px rgb(190,29,47) solid;
 }
-.navitem:active {
-    color: FFFFFF;
-    opacity:1;
- }
+
 .active {
-    border: 3px rgb(190,29,47) solid;
+    outline: 3px rgb(190,29,47) solid;
 }
 
 

@@ -19,6 +19,7 @@ export default class ChallengePage extends Component{
         }
     }
 
+    //method that gets data from API by pic id and updates state
     fetchDirectId = (id) => {
         fetch(`https://art-gps-server.herokuapp.com/get_inspiration?id=${id}`,{
               mode: 'cors'
@@ -30,7 +31,6 @@ export default class ChallengePage extends Component{
             }
             // Examine the text in the response
             response.text().then((artwork)=> {
-                console.log(artwork)
                 this.setState(JSON.parse(artwork)[0])
             })
             })
@@ -52,17 +52,15 @@ export default class ChallengePage extends Component{
             // Examine the text in the response
             response.text().then((artwork)=> {
                 this.setState(JSON.parse(artwork)[0])
-
-
             })
             })
         .catch(function(err) {
             console.log('Fetch Error :-S', err);
         })
     }
+
     componentDidMount() {
         let artworkNum = this.props.location.search;
-        console.log(artworkNum)
         if (artworkNum){
             this.fetchDirectId(artworkNum.replace("?img=",""))
         }
@@ -74,7 +72,7 @@ export default class ChallengePage extends Component{
 
         return (
             <div>
-                <Navbar activePage = "inspiration"/>
+                <Navbar activePage = "gallery"/>
                 <div className = "inspirationContent"> 
                     <div className = "inspirationDescription">
                         <h1>{this.state.artist}</h1>

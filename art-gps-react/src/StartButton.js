@@ -6,7 +6,7 @@ const Link = require("react-router-dom").Link;
 function StartButton(props) {
     return (
         <div className="homeButton">
-            <Link to="test">
+            <Link to="exploration">
                 <img src={start_button} alt="" srcset=""/>
             </Link>
         </div>

@@ -1,5 +1,10 @@
+*{
+    margin:0;
+    padding:0;
+}
 .test {
     font-family: 'Prompt', sans-serif;
+    width: 100vw;
 
 }
 .testPic {
@@ -21,9 +26,9 @@
 .test > h1 {
     display: block;
     width:fit-content;
-    color:#DBB943;
-    margin: 2vmin auto ;
-    font-size: 150%;
+    color:rgba(66, 70, 85,1);
+    margin: 1vmin auto ;
+    font-size: 130%;
     text-align: center;
 }
 .testPics {
@@ -41,10 +46,11 @@
     align-items: center;
     justify-content: flex-start;
     position: absolute;
-    top: 14vh;
-    width:100%;
-    height: 100%;
-    background-color:rgba(66, 70, 85,0.8);
+    top:12vh;
+    z-index: 5;
+    width:100vw;
+    height: 88vh;
+    background-color:rgba(66, 70, 85,0.85);
 }
 
 .testResult a {
@@ -66,6 +72,8 @@
 }
 
 .testResult>p{
+    font-size: 18px;
     color:white;
     margin-top:5vh;
+    margin-bottom: 1vh;
 }

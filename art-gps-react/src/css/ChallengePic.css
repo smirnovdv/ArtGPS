@@ -188,7 +188,7 @@
     font-size: 25px;
     width:20vw;
     height:10vh;
-    background-color:rgba(209, 9, 9, 0.8);
+    background-color:rgba(13, 145, 57,0.8);
     border-radius: 10px;
     display:flex;
     align-items: center;
@@ -213,7 +213,7 @@
     font-size: 25px;
     width:20vw;
     height:10vh;
-    background-color:rgba(209, 9, 9, 0.9);
+    background-color:rgba(13, 145, 57,0.9);
     border-radius: 10px;
     display:flex;
     align-items: center;
@@ -231,7 +231,7 @@
     font-size: 25px;
     width:20vw;
     height:10vh;
-    background-color:rgba(209, 9, 9, 1);
+    background-color:rgba(13, 145, 57, 1);
     border-radius: 10px;
     display:flex;
     align-items: center;
@@ -314,7 +314,7 @@
         width:90vw;
         height: fit-content;
         color:rgb(48, 46, 46);
-        background-color:rgb(167, 155, 155);
+        background-color:rgb(204, 187, 187);
         border-radius: 10px;
         display:flex;
         align-items: center;
@@ -446,7 +446,7 @@
         font-size: 25px;
         width:80vw;
         height:10vh;
-        background-color:rgba(209, 9, 9, 0.8);
+        background-color:rgba(13, 145, 57,0.8);
         border-radius: 10px;
         display:flex;
         align-items: center;
@@ -471,7 +471,7 @@
         font-size: 25px;
         width:80vw;
         height:10vh;
-        background-color:rgba(209, 9, 9, 0.8);
+        background-color:rgba(13, 145, 57,0.8);
         border-radius: 10px;
         display:flex;
         align-items: center;
@@ -489,7 +489,7 @@
         font-size: 26px;
         width:80vw;
         height:10vh;
-        background-color:rgba(209, 9, 9, 0.8);
+        background-color:rgba(13, 145, 57,0.8);
         border-radius: 10px;
         display:flex;
         align-items: center;

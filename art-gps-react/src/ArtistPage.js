@@ -5,17 +5,20 @@ import './css/ArtistPage.css'
 const Router = require("react-router-dom").BrowserRouter;
 const Link = require("react-router-dom").Link;
 
+//Page of an each artist
 export default class ArtistPage extends React.Component {
+    //mapping of routes to full name and pics
     artists = {
         warhol:{name:"Andy Warhol",
                 gallery:["2.jpeg","4.jpeg","3.jpeg","5.jpeg","6.jpeg","7.jpeg"]},
         picasso:{name:"Pablo Picasso",
                 gallery:["10.jpeg","2.jpeg","3.jpeg","4.jpeg","9.jpeg","5.jpeg"]},
-                dali:{name:"Salvador Dali",
+        dali:{name:"Salvador Dali",
                 gallery:[]}
         }
     
     render = () => {
+        //getting artist name from URL
         let artist = this.props.location.search.replace("?name=","")
         return (
             <div className={artist}>

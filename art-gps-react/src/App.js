@@ -17,12 +17,11 @@ class App extends Component {
     return (
     <Router> 
       <Route path='/gallery/artist' component={ArtistPage}/>
-      <Route path='/inspiration' component={InspirationPage}/>
       <Route path='/' exact component={HomePage}/>
       <Route path='/startChallenge' exact component={ChallengePage}/>
       <Route path='/challenge' exact component={ChallengePage}/>
-      <Route path='/gallery' exact component={GalleryPage}/>
-      <Route path='/test' component={TestPage}/>
+      <Route path='/gallery' exact component={InspirationPage}/>
+      <Route path='/exploration' exact component={TestPage}/>
     </Router>
     );
   };

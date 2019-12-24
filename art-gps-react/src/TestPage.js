@@ -6,7 +6,7 @@ import './css/TestPage.css';
 export default function TestPage() {
     return (
         <div>
-            <Navbar />
+            <Navbar activePage="exploration"/>
             <TestPics />
         </div>
     )

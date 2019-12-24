@@ -1,5 +1,4 @@
 .startChallenge {
-    font-family: 'Prompt', sans-serif;
     width: 100vw;
     height: 84vh;
     display:flex;
@@ -27,7 +26,7 @@
     font-size: 25px;
     width:20vw;
     min-height:70px;
-    background-color:rgba(209, 9, 9, 0.8);
+    background-color:#0e923a;
     border-radius: 10px;
     display:flex;
     align-items: center;
@@ -44,7 +43,7 @@
     font-size: 26px;
     width:20vw;
     min-height:70px;
-    background-color:rgb(209, 9, 9);
+    background-color:#0e923a;
     border-radius: 10px;
     display:flex;
     align-items: center;
@@ -98,7 +97,7 @@
         font-size: 25px;
         width:70vw;
         min-height:70px;
-        background-color:rgba(209, 9, 9, 0.8);
+        background-color:#0e923a;
         border-radius: 10px;
         display:flex;
         align-items: center;
@@ -119,7 +118,7 @@
         font-size: 26px;
         width:70vw;
         min-height:70px;
-        background-color:rgb(209, 9, 9);
+        background-color:#0e923a;
         border-radius: 10px;
         display:flex;
         align-items: center;
