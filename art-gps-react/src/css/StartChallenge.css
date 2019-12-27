@@ -3,7 +3,7 @@
     height: 84vh;
     display:flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     font-family: 'Prompt', sans-serif;
     font-size:140%;
@@ -78,7 +78,7 @@
         height: 84vh;
         display:flex;
         flex-direction: column;
-        justify-content: start;
+        justify-content: flex-start;
         align-items: center;
         font-family: 'Prompt', sans-serif;
         font-size:100%;
@@ -221,3 +221,5 @@
         }
     }
 }
+
+

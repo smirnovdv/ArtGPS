@@ -3,7 +3,7 @@ import './css/NavItem.css';
 const Link = require("react-router-dom").Link;
 
 
-function NavItem(props) {
+export default function NavItem(props) {
     return (
         <Link to={"/"+props.name}>
             {/* this template literal makes it possible to use more than one className, applies active class to the navItem of the current page */}
@@ -12,6 +12,4 @@ function NavItem(props) {
             </div>
         </Link>
     )
-  }
-
-export default NavItem;
+};

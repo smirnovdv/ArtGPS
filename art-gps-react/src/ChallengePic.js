@@ -1,43 +1,21 @@
 import React, { Component } from 'react';
 import './css/ChallengePic.css'
 
+
+//key Challenge component
 export default class ChallengePic extends Component {
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
         this.state = {
-            artworks:[{},{},{}],
             score:0,
             time:0,
             seconds:60,
-            rightAnswer:{image_url:"*"},
-            resultVisibility:"none"
+            resultVisibility:"none",
+            animation:"flip-in-hor-bottom"
         }
     }
-    fetchPic() {
-        fetch(`https://art-gps-server.herokuapp.com/get_challenge`)
-        .then(
-            (response)=> {
-            if (response.status !== 200) {
-                console.log('Looks like there was a problem. Status Code: ' +
-                response.status);
-                return;
-            }
-            // Examine the text in the response
-            response.text().then((artwork)=> {
-                let d = new Date();
-                let rightAnswer = JSON.parse(artwork).splice(Math.floor(Math.random()*3),1)
-                this.setState({artworks:JSON.parse(artwork),
-                               rightAnswer:rightAnswer[0],
-                               time:d.getTime()}
-                )
-            });
-            }
-        )
-        .catch(function(err) {
-            console.log('Fetch Error :-S', err);
-        });
-    }
-    //function managing time
+    
+    //method managing timer and showing results in the end of it
     tick() {
         if (this.state.seconds>0) {
             this.setState(prevState => ({
@@ -50,35 +28,35 @@ export default class ChallengePic extends Component {
         }
     }
 
-    
+    //fetching first question
     componentDidMount() {
-        //fetching "proxy": "http://localhost:3001",
-        this.fetchPic();
         this.interval = setInterval(() => this.tick(), 1000);
     }
     
     
-    // clicks on answers
+    // clicks on answers choices
     handleClick = (e) => {
         let target = e.target;
         let d = new Date();
-        if (this.state.seconds>0){
-            if (target.innerText === this.state.rightAnswer.title.trim()) {
-                
+        if (this.state.seconds > 0){
+            //right answer
+            if (target.innerText === this.props.rightAnswer.title.trim()) {
                 this.setState((prevState, props) => ({
-                    score: prevState.score  + Math.min(Math.round(100000/(d.getTime() - prevState.time)),100)
+                    //adding score points based on speed of clicks
+                    score: prevState.score  + Math.min(Math.round(100000/(d.getTime() - this.props.time)),100),
+                    
                 }));
                 target.classList="clickedRight";
                 setTimeout(()=>{
-                        this.fetchPic()
-                        target.classList="answer";
-                },500)
+                    this.props.fetchPic()
+                    target.classList="answer";
+                },200)
             }
-        
+            //wrong answer
             else {
-                if (this.state.seconds>0 && target.classList!="clickedWrong"){
+                if (this.state.seconds>0 && target.classList!=="clickedWrong"){
                 this.setState((prevState, props) => ({
-                    score: prevState.score - Math.min(Math.round(50000/(d.getTime() - prevState.time)),100)
+                    score: prevState.score - Math.min(Math.round(100000/(d.getTime() - this.props.time)),100)
                 }));
                 target.classList="clickedWrong";
                 setTimeout(()=>{
@@ -103,16 +81,16 @@ export default class ChallengePic extends Component {
             <div className="Challenge">
                 <div className="buttons"> 
                     <p className="challengeQuestion">Name of this artwork?</p>
-                    <div className="answer" onClick={this.handleClick}>{this.state.artworks[0].title}</div>
-                    <div className="answer" onClick={this.handleClick}>{this.state.artworks[1].title}</div>
-                    <div className="answer" onClick={this.handleClick}>{this.state.artworks[2].title}</div>
+                    <div className="answer" onClick={this.handleClick}>{this.props.artworks[0].title}</div>
+                    <div className="answer" onClick={this.handleClick}>{this.props.artworks[1].title}</div>
+                    <div className="answer" onClick={this.handleClick}>{this.props.artworks[2].title}</div>
                     <p className="scoreAndTime">Score:<span className="score"> {this.state.score}</span> Time: <span className="seconds">0:{this.state.seconds>9?this.state.seconds:"0"+this.state.seconds}</span></p>
                     <div className="result" style={{display:this.state.resultVisibility}}>
                         <p>Your score is <span className="score"> {this.state.score} </span></p>
                         <div onClick={this.startAgain}>NEW GAME</div>
                     </div>
                 </div>
-                <div className="challengePic" style={{backgroundImage:'url("'+this.state.rightAnswer.image_url.replace('{image_version}','large')+'")'}}></div>
+                <div className="challengePic " style={{backgroundImage:'url("'+this.props.rightAnswer.image_url.replace('{image_version}','large')+'")'}}></div>
             </div>
         )
     }

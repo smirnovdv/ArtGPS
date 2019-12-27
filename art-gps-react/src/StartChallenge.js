@@ -12,5 +12,5 @@ export default function StartChallenge(props) {
             </div>
         </div>
     )
-}
+};
 

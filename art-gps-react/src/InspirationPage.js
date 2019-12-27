@@ -1,10 +1,6 @@
 import React, {Component} from 'react';
 import './css/InspirationPage.css';
 import Navbar from './Navbar';
-import ChallengePic from './ChallengePic';
-import StartChallenge from './StartChallenge';
-
-
 
 export default class ChallengePage extends Component{
     constructor(props) {
@@ -39,24 +35,13 @@ export default class ChallengePage extends Component{
         })
     }
 
-    fetchModernArtists = (e) => {
-        fetch(`https://art-gps-server.herokuapp.com/get_inspiration?id=${e.target.innerText === "Next" ? Math.min(this.state.id + 1 , 12) : Math.max(this.state.id - 1 , 0)}`,
-        {
-            mode: 'cors'
-     })
-        .then(
-            (response)=> {
-            if (response.status !== 200) {
-                console.log('Looks like there was a problem. Status Code: ' + response.status);
-            }
-            // Examine the text in the response
-            response.text().then((artwork)=> {
-                this.setState(JSON.parse(artwork)[0])
-            })
-            })
-        .catch(function(err) {
-            console.log('Fetch Error :-S', err);
-        })
+    navigationClicks = (e) => {
+        if (e.target.innerText === "Next") {
+            this.fetchDirectId(Math.min(this.state.id + 1 , 12));
+        }
+        else{
+            this.fetchDirectId(Math.max(this.state.id - 1 , 0));
+        }
     }
 
     componentDidMount() {
@@ -68,8 +53,8 @@ export default class ChallengePage extends Component{
             this.fetchDirectId(1)
         }
     }
-    render(){
 
+    render(){
         return (
             <div>
                 <Navbar activePage = "gallery"/>
@@ -81,22 +66,19 @@ export default class ChallengePage extends Component{
                         <p className="inspirationLocation">{this.state.location}</p>
                     </div>
                     <div className = "inspirationNavigation">
-                        <div className = "nextButton" style = {{display:this.state.id == 12?'none':'block'}}>
-                            <p onClick = {this.fetchModernArtists}>Next</p> 
+                        <div className = "nextButton" style = {{display:this.state.id === 12?'none':'block'}}>
+                            <p onClick = {this.navigationClicks}>Next</p> 
                             <div className='upArrow'></div>
                             <div className='downArrow'></div>
                         </div>
-                        <div className = "backButton" style = {{display:this.state.id == 1?'none':'block'}}>
-                            <p onClick = {this.fetchModernArtists}>Back</p> 
+                        <div className = "backButton" style = {{display:this.state.id === 1?'none':'block'}}>
+                            <p onClick = {this.navigationClicks}>Back</p> 
                             <div className='upArrowReversed'></div>
                             <div className='downArrowReversed'></div>
                         </div>
                     </div>
                     <div className = "inspirationPic" style = {{backgroundImage:'url("' + this.state.link + '")'}}>
-
                     </div>
-
-
                 </div>
             </div>
         )}

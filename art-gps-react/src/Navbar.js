@@ -4,7 +4,7 @@ import Logo from './Logo';
 import NavItem from './NavItem';
 
 
-class Navbar extends React.Component {
+export default class Navbar extends React.Component {
     constructor(props) {
             super(props);
             this.state = {
@@ -13,7 +13,7 @@ class Navbar extends React.Component {
             }
     } 
     navItems = [
-        "exploration",
+        "quiz",
         "gallery",
         "challenge"
     ]
@@ -28,7 +28,7 @@ class Navbar extends React.Component {
     
     render() {
         let navComponents = this.navItems.map((name)=>{
-            return (<NavItem clicked = {this.state.sandwichClicked?"":"hideNav"}
+            return (<NavItem key="name" clicked = {this.state.sandwichClicked?"":"hideNav"}
                              name={name}
                              active={(this.props.activePage===name)?"active":""}/>)
          })
@@ -47,6 +47,4 @@ class Navbar extends React.Component {
 
         )
     }
-}
-
-export default Navbar;
+};

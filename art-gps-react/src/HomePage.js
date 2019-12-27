@@ -5,12 +5,31 @@ import Gallery from './Gallery';
 import StartButton from './StartButton';
 
 //Home page
-class HomePage extends Component {
+export default class HomePage extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            gallery: ["1.png","2.png","3.png","4.png","5.png","6.png"]
+            gallery: ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg"]
         }
+    }
+    componentDidMount() {
+        fetch(`https://art-gps-server.herokuapp.com/get_test?id=1`)
+        .then(
+            (response)=> {
+            if (response.status !== 200) {
+                console.log('Looks like there was a problem. Status Code: ' + response.status);
+            }
+            // Examine the text in the response
+            response.text().then((artworks)=> {
+                console.log('server wake up call successful')
+
+            })
+            }
+        )
+        .catch(function(err) {
+            console.log('server wake up call failed', err);
+        })
+        
     }
     render() {
         return (
@@ -23,4 +42,3 @@ class HomePage extends Component {
     }
 }
 
-export default HomePage;
