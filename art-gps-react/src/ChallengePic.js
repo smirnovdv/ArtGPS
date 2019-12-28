@@ -11,7 +11,7 @@ export default class ChallengePic extends Component {
             time:0,
             seconds:60,
             resultVisibility:"none",
-            animation:"flip-in-hor-bottom"
+            animation:"slide-in-right"
         }
     }
     
@@ -41,16 +41,20 @@ export default class ChallengePic extends Component {
         if (this.state.seconds > 0){
             //right answer
             if (target.innerText === this.props.rightAnswer.title.trim()) {
-                this.setState((prevState, props) => ({
-                    //adding score points based on speed of clicks
-                    score: prevState.score  + Math.min(Math.round(100000/(d.getTime() - this.props.time)),100),
-                    
-                }));
                 target.classList="clickedRight";
+                setTimeout(()=>{
+                    this.setState((prevState, props) => ({
+                        //adding score points based on speed of clicks
+                        score: prevState.score  + Math.min(Math.round(100000/(d.getTime() - this.props.time)),100),
+                        animation:"slide-out-left"
+                        
+                    }));
+                },50)
                 setTimeout(()=>{
                     this.props.fetchPic()
                     target.classList="answer";
-                },200)
+                    this.setState({animation:"slide-in-right"})
+                },450)
             }
             //wrong answer
             else {
@@ -81,16 +85,16 @@ export default class ChallengePic extends Component {
             <div className="Challenge">
                 <div className="buttons"> 
                     <p className="challengeQuestion">Name of this artwork?</p>
-                    <div className="answer" onClick={this.handleClick}>{this.props.artworks[0].title}</div>
-                    <div className="answer" onClick={this.handleClick}>{this.props.artworks[1].title}</div>
-                    <div className="answer" onClick={this.handleClick}>{this.props.artworks[2].title}</div>
+                    <div className={"answer " + this.state.animation}  onClick={this.handleClick}>{this.props.artworks[0].title}</div>
+                    <div className={"answer " + this.state.animation}  onClick={this.handleClick}>{this.props.artworks[1].title}</div>
+                    <div className={"answer " + this.state.animation}  onClick={this.handleClick}>{this.props.artworks[2].title}</div>
                     <p className="scoreAndTime">Score:<span className="score"> {this.state.score}</span> Time: <span className="seconds">0:{this.state.seconds>9?this.state.seconds:"0"+this.state.seconds}</span></p>
                     <div className="result" style={{display:this.state.resultVisibility}}>
                         <p>Your score is <span className="score"> {this.state.score} </span></p>
                         <div onClick={this.startAgain}>NEW GAME</div>
                     </div>
                 </div>
-                <div className="challengePic " style={{backgroundImage:'url("'+this.props.rightAnswer.image_url.replace('{image_version}','large')+'")'}}></div>
+                <div className={"challengePic " + this.state.animation} style={{backgroundImage:`url("https://art-gps.s3.amazonaws.com/${this.props.rightAnswer.id}.jpg")`}}></div>
             </div>
         )
     }

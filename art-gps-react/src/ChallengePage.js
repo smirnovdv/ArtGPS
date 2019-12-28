@@ -10,7 +10,7 @@ export default class ChallengePage extends Component{
         this.state = {
             renderedPage : "start",
             artworks:[{},{},{}],
-            rightAnswer:{image_url:"*",
+            rightAnswer:{id:"*",
             time:0}
         }
     }
